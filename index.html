@@ -227,6 +227,15 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .price .pfrom{display:block;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .price .thb{font-size:34px;font-weight:600;font-feature-settings:"lnum" 1}
 .price .usd{display:block;font-family:var(--sans);font-size:13.5px;font-weight:400;color:var(--muted);margin-top:5px;letter-spacing:.2px}
+/* build specs */
+.specs{margin:24px 0 4px;display:grid;gap:11px;padding:0}
+.specs li{list-style:none;padding-left:28px;position:relative;font-size:14.5px;color:var(--ink);font-weight:300;line-height:1.45}
+.specs li b{font-weight:500;color:var(--forest)}
+.specs li::before{content:"";position:absolute;left:2px;top:6px;width:12px;height:7px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+.spec-link{display:inline-block;margin-top:14px;font-size:13px;color:var(--forest);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.spec-link:hover{color:var(--gold)}
+/* ROI rationale */
+.rationale{font-size:14.5px;opacity:.92;margin-top:20px;font-weight:300;max-width:62ch}
 .section .intro{line-height:1.7}
 .unit,.quote{border-radius:16px}
 .ocard,.stat{border-radius:16px}
@@ -312,7 +321,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="hero-inner">
     <div class="eyebrow">12 Units Remaining</div>
     <h1>Own a 180° Sea-View Residence on Koh Phangan</h1>
-    <p class="lead"><strong>Live in your sea-view home, then earn while you're away.</strong> From ฿6.9M, fully managed for up to 15.3% a year. Already building, handovers from late 2026.</p>
+    <p class="lead"><strong>Live in your sea-view home, then earn while you're away.</strong> From ฿6.9M, fully managed for up to 15.3% a year. Already building, first handovers Q4 2026.</p>
     <div class="cta-row">
       <a class="btn btn-wa" href="#" data-wa="hero" data-msg="Hi Gaia, I'm interested in the sea-view residences. Can you tell me more?">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
@@ -340,7 +349,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <section class="trustbar" data-ab="trustbar">
   <div class="wrap">
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg><div><b>30-yr leasehold</b><small>Registered in your name</small></div></div>
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><div><b>Already building</b><small>Handovers late 2026</small></div></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><div><b>Already building</b><small>First handovers Q4 2026</small></div></div>
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg><div><b>Finished residence</b><small>See it in person</small></div></div>
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18v12H3z"/><path d="M3 11h18M8 15h3"/></svg><div><b>100% managed</b><small>Hands-off rental income</small></div></div>
   </div>
@@ -391,9 +400,17 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
           <div class="tl"><div class="stage">Foundations</div><b>Complete</b><div class="done">✓ Done</div></div>
           <div class="tl"><div class="stage">Structure</div><b>In progress</b></div>
           <div class="tl"><div class="stage">Finishing</div><b>Through 2026</b></div>
-          <div class="tl"><div class="stage">Handovers</div><b>From late 2026</b></div>
+          <div class="tl"><div class="stage">Handovers</div><b>Q4 2026</b></div>
         </div>
-        <div class="cta-row" style="margin-top:8px">
+        <div class="eyebrow" style="margin:28px 0 2px">Built To Last</div>
+        <ul class="specs">
+          <li><b>CPAC tiled roof, 50-year lifespan</b> with 10cm thermal insulation. Most island villas use shingles that last just 5 to 7 years.</li>
+          <li><b>Double-layered cavity walls</b> insulated against heat, sound and moisture.</li>
+          <li><b>Reinforced concrete floors</b> with a waterproof membrane: zero moisture and full soundproofing between floors.</li>
+          <li><b>Coastal-grade aluminium frames and 10mm tempered glass</b> sliding systems, built for the sea air.</li>
+        </ul>
+        <a class="spec-link" href="https://gaia-residence.com/documents/GR_Materials_Construction_updated.pdf" target="_blank" rel="noopener">View the full construction specs (PDF) →</a>
+        <div class="cta-row" style="margin-top:22px">
           <a class="btn btn-gold" href="#" data-wa="viewing" data-msg="Hi Gaia, I'd like to walk through the finished residence. When can I visit?">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             Book a walkthrough of the finished residence
@@ -449,6 +466,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <div class="stat"><div class="num">~6.5 yr</div><div class="lbl">Projected payback period</div></div>
       <div class="stat"><div class="num">100%</div><div class="lbl">Fully managed & turnkey</div></div>
     </div>
+    <p class="rationale">Driven by Chaloklum's high premium occupancy rates and run end-to-end by our own in-house management team, so it stays genuinely hands-off for you.</p>
     <p class="compliance">Projected returns based on current rental performance and management modelling. Returns are not guaranteed and may vary.</p>
     <div class="cta-row" style="margin-top:26px">
       <a class="btn btn-wa" href="#" data-wa="investment" data-msg="Hi Gaia, I'd like to see the investment & ROI breakdown for the residences.">
