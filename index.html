@@ -260,6 +260,18 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .founder .fname{font-family:var(--serif);font-size:19px;color:var(--forest);font-weight:600;display:block}
 .founder .frole{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin:3px 0 9px}
 .founder p{font-size:14px;color:var(--ink);font-weight:300;line-height:1.55}
+/* buyer testimonial video */
+.vwrap{max-width:680px;margin:38px auto 4px}
+.vposter{position:relative;display:block;width:100%;aspect-ratio:16/9;border:none;padding:0;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow);background:var(--charcoal)}
+.vposter img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .45s ease,opacity .3s}
+.vposter:hover img{transform:scale(1.04);opacity:.95}
+.vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.vplay svg{width:32px;height:32px;color:var(--charcoal);position:relative;left:2px}
+.vplay::before{content:"";position:absolute;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
+.vposter:hover .vplay::before{transform:scale(1.08)}
+.vplay svg{z-index:1}
+.vframe{width:100%;aspect-ratio:16/9;border:none;border-radius:16px;box-shadow:var(--shadow)}
+.vcap{font-size:13px;color:var(--muted);margin-top:12px;font-weight:300;letter-spacing:.3px}
 .section .intro{line-height:1.7}
 .section .intro strong{font-weight:500;color:var(--forest)}
 .unit,.quote{border-radius:16px}
@@ -340,26 +352,21 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero" data-ab="hero-investor">
+<section class="hero" data-ab="hero-lifestyle">
   <picture>
     <source media="(max-width:760px)" srcset="assets/hero-bay.jpg">
     <img class="hero-bg" src="assets/hero-curtain.jpg" alt="Sea view over Chaloklum Bay from a Gaia residence on Koh Phangan" fetchpriority="high">
   </picture>
   <div class="hero-scrim"></div>
   <div class="hero-inner">
-    <div class="eyebrow">60% Reserved</div>
-    <h1>Own a 180° Sea-View Residence on Koh Phangan</h1>
-    <p class="lead"><strong>Live in your sea-view home, then earn while you're away.</strong> From ฿6.9M, fully managed for up to 15.3% a year. Already building, first handovers Q4 2026.</p>
+    <div class="eyebrow">Chaloklum Bay · Koh Phangan</div>
+    <h1>Own a 180° Sea View. Forever.</h1>
+    <p class="lead">Boutique residences in the green hills above Chaloklum Bay, two minutes' walk from the beach, with a sea view no one can ever take away.</p>
     <div class="cta-row">
       <a class="btn btn-wa" href="#" data-wa="hero" data-msg="Hi Gaia, I'm interested in the sea-view residences. Can you tell me more?">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
         Chat on WhatsApp
       </a>
-      <button class="btn btn-gold" data-quiz>Find your residence →</button>
-    </div>
-    <div class="hero-chips">
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>30-year leasehold, registered in your name</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>A finished residence you can walk today</span>
     </div>
     <div style="margin-top:22px">
       <a class="gbadge" href="#" data-google>
@@ -372,24 +379,14 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   </div>
 </section>
 
-<!-- ============ TRUST BAR ============ -->
-<section class="trustbar" data-ab="trustbar">
-  <div class="wrap">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg><div><b>30-yr leasehold</b><small>Registered in your name</small></div></div>
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><div><b>Already building</b><small>First handovers Q4 2026</small></div></div>
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg><div><b>Finished residence</b><small>See it in person</small></div></div>
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18v12H3z"/><path d="M3 11h18M8 15h3"/></svg><div><b>100% managed</b><small>Hands-off rental income</small></div></div>
-  </div>
-</section>
-
 <!-- ============ SEA VIEW HOOK ============ -->
 <section class="section" data-ab="seaview">
   <div class="wrap">
     <div class="split">
       <div>
-        <div class="eyebrow">The View Is Protected By Law</div>
-        <h2>180° of open sea. Forever.</h2>
-        <p class="intro">Every Gaia residence faces a full 180° sweep of the Gulf, and forest-zoning protection means nothing will ever be built to block it. Two minutes' walk to the beach, set into the green hills above Chaloklum.</p>
+        <div class="eyebrow">How Can A View Be Forever?</div>
+        <h2>Because it's protected by law.</h2>
+        <p class="intro">Every Gaia residence faces a full 180° sweep of the Gulf, and the land in front is forest-zoned: nothing can ever be built to block it. Not next year, not in thirty. The view you fall for is the view you keep.</p>
         <ul class="feat" style="font-size:16px;color:var(--ink)">
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Guaranteed unobstructed sea views</li>
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> 2-minute walk to the beach</li>
@@ -401,47 +398,15 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   </div>
 </section>
 
-<!-- ============ SAFE OWNERSHIP ============ -->
-<section class="section dark" data-ab="ownership">
-  <div class="wrap">
-    <div class="eyebrow">Ownership You Can Trust</div>
-    <h2>100% safe, and 100% yours.</h2>
-    <p class="intro">Your residence is held on a 30-year registered leasehold in your own name, fully compliant with Thai law, with your own lawyer guiding every step.</p>
-    <div class="cards3">
-      <div class="ocard">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/></svg>
-        <h3>30-Year Registered Leasehold</h3>
-        <p>A clear 30-year lease, registered at the land office in your own name.</p>
-      </div>
-      <div class="ocard">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-        <h3>Held In Your Name</h3>
-        <p>Owned directly by you, with no nominee company. Simple, transparent and secure.</p>
-      </div>
-      <div class="ocard">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V5h6v2"/></svg>
-        <h3>Compliant With Thai Law</h3>
-        <p>Your dedicated English-speaking lawyer makes sure every step is fully legal and compliant.</p>
-      </div>
-    </div>
-    <div class="cta-row" style="margin-top:34px">
-      <a class="btn btn-wa" href="#" data-wa="ownership" data-msg="Hi Gaia, I'd like to understand the ownership and leasehold structure. Can you explain?">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-        Ask us anything on WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ============ IT'S REAL / CONSTRUCTION ============ -->
 <section class="section" data-ab="construction">
   <div class="wrap">
     <div class="split rev">
       <div class="media"><img src="assets/finished-wall.webp" alt="Interior of a finished, furnished Gaia residence" loading="lazy"></div>
       <div>
-        <div class="eyebrow">Not A Render, We're Building It Now</div>
+        <div class="eyebrow">Experience It Yourself</div>
         <h2>One residence is already finished. Come walk it.</h2>
-        <p class="intro">Most off-plan projects ask you to trust a brochure. We'd rather show you. The structure is going up now, and <strong>a completed, fully furnished residence is already standing</strong>, sea views and all.</p>
+        <p class="intro"><strong>The show residence is standing right now, built, furnished and open for visits.</strong> Walk the rooms, stand on the terrace, watch the bay, and then decide.</p>
         <div class="timeline">
           <div class="tl"><div class="stage">Foundations</div><b>Complete</b><div class="done">✓ Done</div></div>
           <div class="tl"><div class="stage">Structure</div><b>In progress</b></div>
@@ -486,7 +451,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="wrap">
     <div class="eyebrow">Resort Life</div>
     <h2>A wellness resort you live inside.</h2>
-    <p class="intro">Gaia is built as an integrated wellness and remote-work eco-resort, the kind of place travellers book out year-round. That is exactly what keeps your residence earning.</p>
+    <p class="intro">Sauna overlooking the bay, yoga in the trees, a café where your laptop faces the sea. Life at Gaia feels like a resort, because it is one.</p>
     <div class="amen-grid">
       <div class="amen-card"><img src="assets/amenity-sauna.jpg" alt="Spa sauna with sea view" loading="lazy"><div class="cap"><h3>Spa, Sauna & Ice Bath</h3><p>A high-end spa with traditional wood sauna and cold plunge for recovery.</p></div></div>
       <div class="amen-card"><img src="assets/amenity-yoga.jpg" alt="Yoga shala overlooking the bay" loading="lazy"><div class="cap"><h3>Yoga Shala</h3><p>A dedicated movement space set into the grounds, open to the bay.</p></div></div>
@@ -496,6 +461,35 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>On-site gym</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>On-site daycare centre</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Reception & 5-star housekeeping</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDERS / HUMAN TOUCH ============ -->
+<!-- TODO: when Tomas gets founder quotes/short videos (e.g. David on the rainy season,
+     life on KPG), upgrade these bios with direct quotes or a video like the buyer one. -->
+<section class="section" data-ab="founders">
+  <div class="wrap">
+    <div class="eyebrow">The People Behind Gaia</div>
+    <h2>Built by two people who chose this island.</h2>
+    <p class="intro">Gaia isn't a faceless developer. It's two founders who live on Koh Phangan, build here, and will happily walk you through the site themselves.</p>
+    <div class="founders" style="border-top:none;padding-top:0;margin-top:30px">
+      <div class="founder">
+        <img src="assets/team-waltz.png" alt="Mr David Waltz">
+        <div>
+          <span class="fname">Mr David Waltz</span>
+          <span class="frole">Founder &amp; Developer</span>
+          <p>David found Koh Phangan through a decade of building across the USA and Thailand, and stayed. Fluent in Thai, he built the island's Rasaruna Retreat Centre and Bliss Project before Gaia, and still oversees every stage of the build himself.</p>
+        </div>
+      </div>
+      <div class="founder">
+        <img src="assets/team-goodman.jpeg" alt="Dr David Goodman">
+        <div>
+          <span class="fname">Dr David Goodman</span>
+          <span class="frole">Founder &amp; Developer</span>
+          <p>A British scientist who came to the island seven years ago and never left. He has spent those years learning what tropical sun, salt and rain do to a house, and engineering Gaia so they never win. If your home stays cool and dry, that's him.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -517,6 +511,38 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <a class="btn btn-wa" href="#" data-wa="investment" data-msg="Hi Gaia, I'd like to see the investment & ROI breakdown for the residences.">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
         Get the investment breakdown
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFE OWNERSHIP ============ -->
+<section class="section dark" data-ab="ownership">
+  <div class="wrap">
+    <div class="eyebrow">Ownership You Can Trust</div>
+    <h2>100% safe, and 100% yours.</h2>
+    <p class="intro">Your residence is held on a 30-year registered leasehold in your own name, fully compliant with Thai law, with your own lawyer guiding every step.</p>
+    <div class="cards3">
+      <div class="ocard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/></svg>
+        <h3>30-Year Registered Leasehold</h3>
+        <p>A clear 30-year lease, registered at the land office in your own name.</p>
+      </div>
+      <div class="ocard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        <h3>Held In Your Name</h3>
+        <p>Owned directly by you, with no nominee company. Simple, transparent and secure.</p>
+      </div>
+      <div class="ocard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V5h6v2"/></svg>
+        <h3>Compliant With Thai Law</h3>
+        <p>Your dedicated English-speaking lawyer makes sure every step is fully legal and compliant.</p>
+      </div>
+    </div>
+    <div class="cta-row" style="margin-top:34px">
+      <a class="btn btn-wa" href="#" data-wa="ownership" data-msg="Hi Gaia, I'd like to understand the ownership and leasehold structure. Can you explain?">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
+        Ask us anything on WhatsApp
       </a>
     </div>
   </div>
@@ -616,6 +642,15 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         Read the reviews on Google
       </a>
     </div>
+    <!-- Buyer testimonial video. Paste the YouTube video ID into TESTIMONIAL_VIDEO_ID
+         in the script config below to activate this block (it stays hidden until then). -->
+    <div class="vwrap" id="vwrap" hidden>
+      <button class="vposter" id="vposter" aria-label="Play the buyer testimonial video">
+        <img src="assets/hero-living-seaview.webp" alt="A Gaia buyer shares their experience" loading="lazy">
+        <span class="vplay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <p class="vcap">Hear it from a Gaia buyer</p>
+    </div>
     <div class="quotes" style="grid-template-columns:1fr;max-width:640px;margin:36px auto 0;text-align:left;gap:16px">
       <div class="quote">
         <div class="stars">★★★★★</div>
@@ -631,24 +666,6 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <div class="stars">★★★★★</div>
         <p>"We went to check out Gaia Residence and loved it so much! The view is absolutely unreal. I love how they laid out all the buildings and community areas to be both spacious and in nature. Each apartment has great attention to detail in the design, both natural and luxurious."</p>
         <div class="who">Michelle Pitcher · Google review</div>
-      </div>
-    </div>
-    <div class="founders">
-      <div class="founder">
-        <img src="assets/team-waltz.png" alt="Mr David Waltz">
-        <div>
-          <span class="fname">Mr David Waltz</span>
-          <span class="frole">Founder &amp; Developer</span>
-          <p>American and fluent in Thai, with a decade of building across the USA and Koh Phangan, including the Rasaruna Retreat Centre and Bliss Project. He pairs international standards with real on-island know-how.</p>
-        </div>
-      </div>
-      <div class="founder">
-        <img src="assets/team-goodman.jpeg" alt="Dr David Goodman">
-        <div>
-          <span class="fname">Dr David Goodman</span>
-          <span class="frole">Founder &amp; Developer</span>
-          <p>A British scientist and engineer, seven years on Koh Phangan. His PhD-level engineering shapes every material and system at Gaia, and is why the homes stay genuinely cool and dry.</p>
-        </div>
       </div>
     </div>
   </div>
@@ -762,6 +779,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 /* ====== CONFIG ====== */
 var WA_NUMBER = '66936184244';                 // +66 93 618 4244
 var GOOGLE_REVIEWS_URL = 'https://share.google/BiW8fQNsZatFw2ZkL';
+var TESTIMONIAL_VIDEO_ID = '';                 // TODO: paste the YouTube video ID (the part after v= in the URL) to activate the buyer video
 
 /* ====== TRACKING (stubs, fire on every conversion intent) ====== */
 function track(event, params){
@@ -898,13 +916,30 @@ document.querySelectorAll('[data-carousel]').forEach(function(car){
   });
 })();
 
+/* ====== BUYER TESTIMONIAL VIDEO (lazy facade: no third-party JS until play) ====== */
+(function(){
+  var wrap=document.getElementById('vwrap'); if(!wrap) return;
+  if(!TESTIMONIAL_VIDEO_ID){ return; }                 // stays hidden until an ID is set
+  wrap.hidden=false;
+  document.getElementById('vposter').addEventListener('click', function(){
+    track('video_play', {});
+    var f=document.createElement('iframe');
+    f.className='vframe';
+    f.src='https://www.youtube-nocookie.com/embed/'+TESTIMONIAL_VIDEO_ID+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.setAttribute('allowfullscreen','');
+    f.setAttribute('title','Gaia buyer testimonial');
+    this.replaceWith(f);
+  });
+})();
+
 /* ====== REVEAL ON SCROLL ====== */
 (function(){
   if(!('IntersectionObserver' in window)) return;
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.section .eyebrow,.section h2,.section .intro,.ocard,.unit,.quote,.stat,.tl,.media,.ggrid,.siteplan,.founders,.section .cta-row,.gcap,.compliance,.amen-card,.amen-extra').forEach(function(el){
+  document.querySelectorAll('.section .eyebrow,.section h2,.section .intro,.ocard,.unit,.quote,.stat,.tl,.media,.ggrid,.siteplan,.founders,.section .cta-row,.gcap,.compliance,.amen-card,.amen-extra,.vwrap').forEach(function(el){
     el.classList.add('reveal'); io.observe(el);
   });
 })();
