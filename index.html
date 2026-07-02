@@ -272,6 +272,22 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .vplay svg{z-index:1}
 .vframe{width:100%;aspect-ratio:16/9;border:none;border-radius:16px;box-shadow:var(--shadow)}
 .vcap{font-size:13px;color:var(--muted);margin-top:12px;font-weight:300;letter-spacing:.3px}
+/* ---------- Section rhythm: dark-section component overrides ---------- */
+.section.dark .intro strong{color:#fff}
+.dark .specs li{color:rgba(255,255,255,.88)}
+.dark .specs li b{color:var(--gold-light)}
+.dark .gcap{color:rgba(255,255,255,.65)}
+.dark .vcap{color:rgba(255,255,255,.7)}
+.dark .fname{color:#fff}
+.dark .frole{color:var(--gold-light)}
+.dark .founder p{color:rgba(255,255,255,.82)}
+.dark .quote p{color:var(--forest)}
+/* light-mode investment stats */
+.invest-light .stat{background:#fff;border:1px solid #ece5d8;box-shadow:0 8px 24px rgba(20,25,18,.07)}
+.invest-light .stat:hover{border-color:var(--gold);background:#fff}
+.invest-light .stat .num{color:var(--forest)}
+.invest-light .stat .lbl{color:var(--muted);opacity:1}
+.invest-light .rationale{color:var(--ink);opacity:1}
 .section .intro{line-height:1.7}
 .section .intro strong{font-weight:500;color:var(--forest)}
 .unit,.quote{border-radius:16px}
@@ -399,7 +415,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </section>
 
 <!-- ============ IT'S REAL / CONSTRUCTION ============ -->
-<section class="section" data-ab="construction">
+<section class="section dark" data-ab="construction">
   <div class="wrap">
     <div class="split rev">
       <div class="media"><img src="assets/finished-wall.webp" alt="Interior of a finished, furnished Gaia residence" loading="lazy"></div>
@@ -428,13 +444,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ FINISHED RESIDENCE GALLERY ============ -->
-<section class="section gallery" data-ab="gallery">
-  <div class="wrap">
-    <div class="ggrid">
+    <div class="ggrid" style="margin-top:48px">
       <button class="gthumb"><img src="assets/hero-living-seaview.webp" alt="Sea-view living room" loading="lazy"></button>
       <button class="gthumb"><img src="assets/finished-wall.webp" alt="Finished living room" loading="lazy"></button>
       <button class="gthumb"><img src="assets/finished-roomview.webp" alt="Sea view from the living room" loading="lazy"></button>
@@ -442,7 +452,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <button class="gthumb"><img src="assets/finished-bath1.jpg" alt="Bathroom" loading="lazy"></button>
       <button class="gthumb"><img src="assets/finished-plants2.webp" alt="Terrace with lounge chair" loading="lazy"></button>
     </div>
-    <p class="gcap">Real photos of the finished, furnished residence. Tap any photo to explore the full set.</p>
+    <p class="gcap" style="text-align:center">Real photos of the finished, furnished residence. Tap any photo to explore the full set.</p>
   </div>
 </section>
 
@@ -468,7 +478,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ FOUNDERS / HUMAN TOUCH ============ -->
 <!-- TODO: when Tomas gets founder quotes/short videos (e.g. David on the rainy season,
      life on KPG), upgrade these bios with direct quotes or a video like the buyer one. -->
-<section class="section" data-ab="founders">
+<section class="section dark" data-ab="founders">
   <div class="wrap">
     <div class="eyebrow">The People Behind Gaia</div>
     <h2>Built by two people who chose this island.</h2>
@@ -495,7 +505,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </section>
 
 <!-- ============ INVESTOR CASE ============ -->
-<section class="section dark" data-ab="investment">
+<section class="section invest-light" data-ab="investment">
   <div class="wrap">
     <div class="eyebrow">A Home That Pays For Itself</div>
     <h2>Sea-view lifestyle, hands-off income.</h2>
@@ -549,7 +559,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </section>
 
 <!-- ============ RESIDENCES ============ -->
-<section class="section" data-ab="residences">
+<section class="section" style="background:var(--sand)" data-ab="residences">
   <div class="wrap">
     <div class="eyebrow" style="text-align:center">The Residences</div>
     <h2 style="text-align:center;margin:12px auto 12px;max-width:none">Choose your sea-view home</h2>
@@ -627,9 +637,9 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- NOTE: Quote cards intentionally left out until real Google reviews are pasted in.
      To add them back, drop <div class="quote">…</div> blocks inside .quotes with the
      reviewer's real name + verbatim text. Do not invent testimonials. -->
-<section class="section" style="background:var(--sand)" data-ab="proof">
+<section class="section dark" data-ab="proof">
   <div class="wrap" style="text-align:center">
-    <a class="gbadge gbadge--light" href="#" data-google style="margin:0 auto">
+    <a class="gbadge" href="#" data-google style="margin:0 auto">
       <span class="g"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span>
       <span class="sep"></span>
       <span class="stars">★★★★★</span><span class="score">5.0</span>

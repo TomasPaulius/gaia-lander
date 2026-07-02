@@ -261,6 +261,14 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .founder .fname{font-family:var(--serif);font-size:19px;color:var(--forest);font-weight:600;display:block}
 .founder .frole{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin:3px 0 9px}
 .founder p{font-size:14px;color:var(--ink);font-weight:300;line-height:1.55}
+/* ---------- Section rhythm: dark-section component overrides ---------- */
+.gallery.dark{padding-top:64px}
+.dark .gcap{color:rgba(255,255,255,.65)}
+.dark .fname{color:#fff}
+.dark .frole{color:var(--gold-light)}
+.dark .founder p{color:rgba(255,255,255,.82)}
+.dark .founders{border-top-color:rgba(255,255,255,.18)}
+.dark .quote p{color:var(--forest)}
 .section .intro{line-height:1.7}
 .section .intro strong{font-weight:500;color:var(--forest)}
 .unit,.quote{border-radius:16px}
@@ -468,7 +476,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </section>
 
 <!-- ============ FINISHED RESIDENCE GALLERY ============ -->
-<section class="section gallery" data-ab="gallery">
+<section class="section gallery dark" data-ab="gallery">
   <div class="wrap">
     <div class="ggrid">
       <button class="gthumb"><img src="assets/hero-living-seaview.webp" alt="Sea-view living room" loading="lazy"></button>
@@ -602,9 +610,9 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- NOTE: Quote cards intentionally left out until real Google reviews are pasted in.
      To add them back, drop <div class="quote">…</div> blocks inside .quotes with the
      reviewer's real name + verbatim text. Do not invent testimonials. -->
-<section class="section" style="background:var(--sand)" data-ab="proof">
+<section class="section dark" data-ab="proof">
   <div class="wrap" style="text-align:center">
-    <a class="gbadge gbadge--light" href="#" data-google style="margin:0 auto">
+    <a class="gbadge" href="#" data-google style="margin:0 auto">
       <span class="g"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span>
       <span class="sep"></span>
       <span class="stars">★★★★★</span><span class="score">5.0</span>
