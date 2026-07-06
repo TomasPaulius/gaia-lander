@@ -260,9 +260,13 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .founder .fname{font-family:var(--serif);font-size:19px;color:var(--forest);font-weight:600;display:block}
 .founder .frole{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin:3px 0 9px}
 .founder p{font-size:14px;color:var(--ink);font-weight:300;line-height:1.55}
-/* buyer testimonial video */
-.vwrap{max-width:680px;margin:38px auto 4px}
-.vposter{position:relative;display:block;width:100%;aspect-ratio:16/9;border:none;padding:0;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow);background:var(--charcoal)}
+/* image caption (e.g. bay view) */
+.media-cap{display:block;font-size:12px;color:var(--muted);font-weight:300;margin-top:11px;letter-spacing:.4px;font-style:italic;text-align:center}
+.section.dark .media-cap{color:rgba(255,255,255,.6)}
+.media:has(.media-cap) img{height:auto}
+/* buyer testimonial video (vertical Short) */
+.vwrap{max-width:324px;margin:40px auto 4px}
+.vposter{position:relative;display:block;width:100%;aspect-ratio:9/16;border:none;padding:0;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow);background:var(--charcoal)}
 .vposter img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .45s ease,opacity .3s}
 .vposter:hover img{transform:scale(1.04);opacity:.95}
 .vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
@@ -270,7 +274,7 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .vplay::before{content:"";position:absolute;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
 .vposter:hover .vplay::before{transform:scale(1.08)}
 .vplay svg{z-index:1}
-.vframe{width:100%;aspect-ratio:16/9;border:none;border-radius:16px;box-shadow:var(--shadow)}
+.vframe{width:100%;aspect-ratio:9/16;border:none;border-radius:16px;box-shadow:var(--shadow)}
 .vcap{font-size:13px;color:var(--muted);margin-top:12px;font-weight:300;letter-spacing:.3px}
 /* ---------- Section rhythm: dark-section component overrides ---------- */
 .section.dark .intro strong{color:#fff}
@@ -404,12 +408,12 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <h2>Because it's protected by law.</h2>
         <p class="intro">Every Gaia residence faces a full 180° sweep of the Gulf, and the land in front is forest-zoned: nothing can ever be built to block it. Not next year, not in thirty. The view you fall for is the view you keep.</p>
         <ul class="feat" style="font-size:16px;color:var(--ink)">
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Guaranteed unobstructed sea views</li>
+          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Guaranteed sea views</li>
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> 2-minute walk to the beach</li>
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Quiet, green hillside in Chaloklum village</li>
         </ul>
       </div>
-      <div class="media"><img src="assets/hero-bay.jpg" alt="180 degree sea view over Chaloklum Bay from Gaia Residence" loading="lazy"></div>
+      <div class="media"><img src="assets/hero-bay.jpg" alt="180 degree sea view over Chaloklum Bay from Gaia Residence" loading="lazy"><span class="media-cap">A view from the project</span></div>
     </div>
   </div>
 </section>
@@ -418,7 +422,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <section class="section dark" data-ab="construction">
   <div class="wrap">
     <div class="split rev">
-      <div class="media"><img src="assets/finished-wall.webp" alt="Interior of a finished, furnished Gaia residence" loading="lazy"></div>
+      <div class="media"><img src="assets/finished-living.webp" alt="Living room of the finished, furnished Gaia residence with sea view" loading="lazy"></div>
       <div>
         <div class="eyebrow">Experience It Yourself</div>
         <h2>One residence is already finished. Come walk it.</h2>
@@ -582,7 +586,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
           <h3>1–2 Bedroom</h3>
           <div class="size">from 103 m² · Highest rental yield</div>
           <ul class="feat"><li>180° sea view</li><li>Private garden on the first floor</li><li>Strongest ROI in the project</li><li>Turnkey managed rental</li></ul>
-          <a class="btn btn-wa" href="#" data-wa="unit-1-2br" data-msg="Hi Gaia, I'm interested in the 1–2 bedroom residences (from ฿6.9M). Can you send details?">Enquire on WhatsApp</a>
+          <a class="btn btn-wa" href="#" data-wa="unit-1-2br" data-msg="Hi Gaia, I'm interested in the 1–2 bedroom residences (from ฿6.9M). Can you send details?">Enquire for this unit</a>
         </div>
       </div>
       <div class="unit">
@@ -602,7 +606,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
           <h3>3 Bedroom</h3>
           <div class="size">from 206 m² · Family & space</div>
           <ul class="feat"><li>Double-size sea-view living</li><li>Ideal for families or sharing</li><li>Turnkey managed rental</li></ul>
-          <a class="btn btn-wa" href="#" data-wa="unit-3br" data-msg="Hi Gaia, I'm interested in the 3 bedroom residences. Can you send details?">Enquire on WhatsApp</a>
+          <a class="btn btn-wa" href="#" data-wa="unit-3br" data-msg="Hi Gaia, I'm interested in the 3 bedroom residences. Can you send details?">Enquire for this unit</a>
         </div>
       </div>
       <div class="unit">
@@ -622,8 +626,8 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <div class="ub">
           <h3>Penthouse Collection</h3>
           <div class="size">103–206 m² · Top floor</div>
-          <ul class="feat"><li>The best views at Gaia</li><li>Premium finishes & private terrace</li><li>Turnkey managed rental</li></ul>
-          <a class="btn btn-wa" href="#" data-wa="unit-penthouse" data-msg="Hi Gaia, I'm interested in the Penthouse Collection. Can you send details?">Enquire on WhatsApp</a>
+          <ul class="feat"><li>Up to 4.7m ceilings</li><li>The most open views at Gaia</li><li>Premium finishes & private terrace</li><li>Turnkey managed rental</li></ul>
+          <a class="btn btn-wa" href="#" data-wa="unit-penthouse" data-msg="Hi Gaia, I'm interested in the Penthouse Collection. Can you send details?">Enquire for this unit</a>
         </div>
       </div>
     </div>
@@ -790,7 +794,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 /* ====== CONFIG ====== */
 var WA_NUMBER = '66936184244';                 // +66 93 618 4244
 var GOOGLE_REVIEWS_URL = 'https://share.google/BiW8fQNsZatFw2ZkL';
-var TESTIMONIAL_VIDEO_ID = '';                 // TODO: paste the YouTube video ID (the part after v= in the URL) to activate the buyer video
+var TESTIMONIAL_VIDEO_ID = 'u6Zi9MD7J7g';       // buyer testimonial (YouTube Short, vertical)
 
 /* ====== TRACKING (stubs, fire on every conversion intent) ====== */
 function track(event, params){
