@@ -84,7 +84,8 @@ header.scrolled .logo{color:var(--forest)}
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);backdrop-filter:blur(10px);color:#fff;
   text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
 .gbadge:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.34);transform:translateY(-1px)}
-.gbadge .g{font-weight:700;font-size:15px;font-family:arial,sans-serif;letter-spacing:-.4px}
+.gbadge .g{display:inline-flex;align-items:center}
+.gbadge .g svg{display:block;width:18px;height:18px}
 .gbadge .g b:nth-child(1){color:#4285F4}.gbadge .g b:nth-child(2){color:#EA4335}.gbadge .g b:nth-child(3){color:#FBBC05}
 .gbadge .g b:nth-child(4){color:#4285F4}.gbadge .g b:nth-child(5){color:#34A853}.gbadge .g b:nth-child(6){color:#EA4335}
 .gbadge .sep{width:1px;height:15px;background:currentColor;opacity:.22}
@@ -388,7 +389,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
     </div>
     <div style="margin-top:22px">
       <a class="gbadge" href="#" data-google>
-        <span class="g"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span>
+        <span class="g"><svg viewBox="0 0 24 24" width="18" height="18" aria-label="Google reviews"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></span>
         <span class="sep"></span>
         <span class="stars">★★★★★</span>
         <span class="score">5.0</span>
@@ -414,14 +415,14 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <div>
         <div class="eyebrow">The View</div>
         <h2>The kind of view you rearrange your day for.</h2>
-        <p class="intro">Every Gaia residence opens onto a full 180° sweep of Chaloklum Bay. Open sea ahead, green mountains framing it, the beach two minutes down the hill. Wake up to it, work beside it, and watch the sun fall into it every evening.</p>
+        <p class="intro">Every Gaia residence opens onto a full 180° sweep of Chaloklum Bay. Open sea ahead, green mountains framing it, the beach two minutes down the hill. Wake up to it, work beside it, and never quite get used to it.</p>
         <ul class="feat" style="font-size:16px;color:var(--ink)">
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> 180° open sea and mountain views</li>
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Two minutes' walk to the beach</li>
           <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Breathtaking from sunrise to sunset</li>
         </ul>
       </div>
-      <div class="media"><img src="assets/hero-bay.jpg" alt="180 degree sea view over Chaloklum Bay from Gaia Residence" loading="lazy"><span class="media-cap">A view from the project</span></div>
+      <div class="media"><img src="assets/hero-curtain.jpg" alt="A terrace chair looking over the sea view from a Gaia residence" loading="lazy"><span class="media-cap">A view from the project</span></div>
     </div>
   </div>
 </section>
@@ -578,10 +579,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <div class="carousel" data-carousel>
           <div class="carousel-track">
             <img src="assets/res-living2.webp" alt="3 bedroom living room with sea view" loading="lazy">
-            <img src="assets/res-duplex-dining.jpg" alt="Dining area" loading="lazy">
-            <img src="assets/finished-roomview.webp" alt="Sea view from the living room" loading="lazy">
-            <img src="assets/finished-sofa2.webp" alt="Living lounge" loading="lazy">
-            <img src="assets/finished-bath2.jpg" alt="Ensuite bathroom" loading="lazy">
+            <img src="assets/res-bedroom-viz.jpg" alt="3 bedroom master bedroom" loading="lazy">
           </div>
           <button class="car-arrow car-prev" aria-label="Previous photo">‹</button>
           <button class="car-arrow car-next" aria-label="Next photo">›</button>
@@ -618,7 +616,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
     </div>
     <div class="siteplan">
       <img src="assets/site-plan.jpeg" alt="Gaia Residence site plan with current availability" loading="lazy" style="max-width:760px;width:100%">
-      <p>Live availability, 60% of the project is now reserved.</p>
+      <p>60% of the project is now reserved. Tap the map to enlarge.</p>
     </div>
   </div>
 </section>
@@ -630,7 +628,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <section class="section dark" data-ab="proof">
   <div class="wrap" style="text-align:center">
     <a class="gbadge" href="#" data-google style="margin:0 auto">
-      <span class="g"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span>
+      <span class="g"><svg viewBox="0 0 24 24" width="18" height="18" aria-label="Google reviews"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></span>
       <span class="sep"></span>
       <span class="stars">★★★★★</span><span class="score">5.0</span>
     </a>
@@ -916,11 +914,14 @@ document.querySelectorAll('[data-carousel]').forEach(function(car){
     'assets/finished-living.webp','assets/finished-sofa2.webp','assets/finished-bed2.webp',
     'assets/finished-decor.webp','assets/finished-bath2.jpg','assets/finished-plants1.webp'
   ];
-  var i=0;
-  function show(n){ i=(n+srcs.length)%srcs.length; img.src=srcs[i]; count.textContent=(i+1)+' / '+srcs.length; }
-  function open(n){ show(n); lb.classList.add('open'); track('gallery_open',{index:n}); }
+  var i=0, single=false;
+  var prevBtn=lb.querySelector('.lb-prev'), nextBtn=lb.querySelector('.lb-next');
+  function show(n){ if(single) return; i=(n+srcs.length)%srcs.length; img.src=srcs[i]; count.textContent=(i+1)+' / '+srcs.length; }
+  function open(n){ single=false; prevBtn.style.display=''; nextBtn.style.display=''; show(n); lb.classList.add('open'); track('gallery_open',{index:n}); }
   function close(){ lb.classList.remove('open'); }
   thumbs.forEach(function(t,n){ t.addEventListener('click', function(){ open(n); }); });
+  var sp=document.querySelector('.siteplan img');
+  if(sp){ sp.style.cursor='zoom-in'; sp.addEventListener('click', function(){ single=true; img.src=this.getAttribute('src'); count.textContent='Site plan · current availability'; prevBtn.style.display='none'; nextBtn.style.display='none'; lb.classList.add('open'); track('siteplan_open',{}); }); }
   lb.querySelector('.lb-close').addEventListener('click', close);
   lb.querySelector('.lb-prev').addEventListener('click', function(e){ e.stopPropagation(); show(i-1); });
   lb.querySelector('.lb-next').addEventListener('click', function(e){ e.stopPropagation(); show(i+1); });
