@@ -63,8 +63,9 @@ header.scrolled .logo{color:var(--forest)}
 @media(min-width:761px){.header-cta{display:inline-flex;padding:11px 20px;font-size:14.5px}}
 .header-right{display:flex;align-items:center;gap:12px}
 .langtoggle{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.42);border-radius:50px;overflow:hidden;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);transition:border-color .3s,background .3s}
-.langtoggle button{background:transparent;border:none;color:#fff;font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:1.2px;padding:7px 13px;cursor:pointer;transition:background .2s,color .2s;line-height:1}
+.langtoggle button{display:inline-flex;align-items:center;gap:6px;background:transparent;border:none;color:#fff;font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:1.2px;padding:7px 12px;cursor:pointer;transition:background .2s,color .2s;line-height:1}
 .langtoggle button.on{background:var(--gold);color:var(--charcoal)}
+.langtoggle .flag{width:19px;height:13px;border-radius:2px;flex:none;display:block;box-shadow:0 0 0 1px rgba(0,0,0,.14)}
 header.scrolled .langtoggle{border-color:rgba(44,59,45,.28);background:rgba(44,59,45,.05)}
 header.scrolled .langtoggle button{color:var(--forest)}
 header.scrolled .langtoggle button.on{color:var(--charcoal)}
@@ -378,8 +379,8 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   </a>
   <div class="header-right">
     <div class="langtoggle" id="langtoggle" role="group" aria-label="Language / Langue">
-      <button type="button" data-lang="en" class="on" aria-pressed="true">EN</button>
-      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" data-lang="en" class="on" aria-pressed="true"><svg class="flag" viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true"><clipPath id="uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk-s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false"><svg class="flag" viewBox="0 0 3 2" preserveAspectRatio="none" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055A4"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg>FR</button>
     </div>
     <a class="btn btn-wa header-cta" href="#" data-wa="header" data-msg="Hi Gaia, I'd like to know more about the sea-view residences." data-msg-fr="Bonjour Gaia, j'aimerais en savoir plus sur les résidences vue mer.">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
@@ -607,10 +608,11 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <div class="unit">
         <div class="carousel" data-carousel>
           <div class="carousel-track">
-            <img src="assets/res-living2.webp" alt="3 bedroom living room with sea view" loading="lazy">
-            <img src="assets/res-duplex-living.jpg" alt="3 bedroom open living and kitchen" loading="lazy">
-            <img src="assets/res-duplex-dining.jpg" alt="3 bedroom dining area" loading="lazy">
-            <img src="assets/res-bedroom-viz.jpg" alt="3 bedroom master bedroom" loading="lazy">
+            <img src="assets/res3-living-kitchen.jpg" alt="3 bedroom open living, dining and kitchen" loading="lazy">
+            <img src="assets/res3-sofa-chairs.jpg" alt="3 bedroom living room with hanging chairs" loading="lazy">
+            <img src="assets/res3-sofa-kitchen.jpg" alt="3 bedroom lounge with kitchen behind" loading="lazy">
+            <img src="assets/res3-bedroom.jpg" alt="3 bedroom master bedroom opening to the terrace" loading="lazy">
+            <img src="assets/res3-bath.jpg" alt="3 bedroom bathroom with freestanding tub" loading="lazy">
           </div>
           <button class="car-arrow car-prev" aria-label="Previous photo">‹</button>
           <button class="car-arrow car-next" aria-label="Next photo">›</button>
@@ -630,7 +632,6 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
             <img src="assets/finished-bedroom.webp" alt="Penthouse master bedroom" loading="lazy">
             <img src="assets/finished-bed2.webp" alt="Penthouse bedroom" loading="lazy">
             <img src="assets/res-bedroom3.jpg" alt="Bedroom with sea outlook" loading="lazy">
-            <img src="assets/finished-living.webp" alt="Penthouse living room" loading="lazy">
             <img src="assets/finished-plants1.webp" alt="Private terrace" loading="lazy">
           </div>
           <button class="car-arrow car-prev" aria-label="Previous photo">‹</button>
