@@ -61,6 +61,14 @@ header.scrolled{background:rgba(251,248,242,.96);backdrop-filter:blur(10px);box-
 header.scrolled .logo{color:var(--forest)}
 .header-cta{display:none}
 @media(min-width:761px){.header-cta{display:inline-flex;padding:11px 20px;font-size:14.5px}}
+.header-right{display:flex;align-items:center;gap:12px}
+.langtoggle{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.42);border-radius:50px;overflow:hidden;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);transition:border-color .3s,background .3s}
+.langtoggle button{background:transparent;border:none;color:#fff;font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:1.2px;padding:7px 13px;cursor:pointer;transition:background .2s,color .2s;line-height:1}
+.langtoggle button.on{background:var(--gold);color:var(--charcoal)}
+header.scrolled .langtoggle{border-color:rgba(44,59,45,.28);background:rgba(44,59,45,.05)}
+header.scrolled .langtoggle button{color:var(--forest)}
+header.scrolled .langtoggle button.on{color:var(--charcoal)}
+@media(max-width:760px){.langtoggle button{padding:6px 11px;font-size:12px}}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
@@ -368,10 +376,16 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <a class="brand" href="#" aria-label="Gaia Residence">
     <span class="wordmark">Gaia Residence</span>
   </a>
-  <a class="btn btn-wa header-cta" href="#" data-wa="header" data-msg="Hi Gaia, I'd like to know more about the sea-view residences.">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-    Chat on WhatsApp
-  </a>
+  <div class="header-right">
+    <div class="langtoggle" id="langtoggle" role="group" aria-label="Language / Langue">
+      <button type="button" data-lang="en" class="on" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+    <a class="btn btn-wa header-cta" href="#" data-wa="header" data-msg="Hi Gaia, I'd like to know more about the sea-view residences." data-msg-fr="Bonjour Gaia, j'aimerais en savoir plus sur les résidences vue mer.">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
+      <span data-t="waChat">Chat on WhatsApp</span>
+    </a>
+  </div>
 </header>
 
 <!-- ============ HERO ============ -->
@@ -380,12 +394,12 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <div class="eyebrow">Chaloklum Bay · Koh Phangan</div>
-    <h1>The sea is the first thing you'll see.</h1>
-    <p class="lead">Fully finished &amp; furnished sea-view residences from ฿6.9M, two minutes above Chaloklum Bay, Koh Phangan.</p>
+    <h1 data-t="heroH1">The sea is the first thing you'll see.</h1>
+    <p class="lead" data-t="heroLead">Fully finished &amp; furnished sea-view residences from ฿6.9M, two minutes above Chaloklum Bay, Koh Phangan.</p>
     <div class="cta-row">
-      <a class="btn btn-wa" href="#" data-wa="hero" data-msg="Hi Gaia, I'm interested in the sea-view residences. Can you tell me more?">
+      <a class="btn btn-wa" href="#" data-wa="hero" data-msg="Hi Gaia, I'm interested in the sea-view residences. Can you tell me more?" data-msg-fr="Bonjour Gaia, je suis intéressé(e) par les résidences vue mer. Pouvez-vous m'en dire plus ?">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-        Chat on WhatsApp
+        <span data-t="waChat">Chat on WhatsApp</span>
       </a>
     </div>
     <div style="margin-top:22px">
@@ -404,16 +418,16 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="wrap">
     <div class="split">
       <div>
-        <div class="eyebrow">The View</div>
-        <h2>The kind of view you rearrange your day for.</h2>
-        <p class="intro">Every Gaia residence opens onto a full 180° sweep of Chaloklum Bay. Open sea ahead, green mountains framing it, the beach two minutes down the hill. Wake up to it, work beside it, and never quite get used to it.</p>
+        <div class="eyebrow" data-t="svEye">The View</div>
+        <h2 data-t="svH2">The kind of view you rearrange your day for.</h2>
+        <p class="intro" data-t="svIntro">Every Gaia residence opens onto a full 180° sweep of Chaloklum Bay. Open sea ahead, green mountains framing it, the beach two minutes down the hill. Wake up to it, work beside it, and never quite get used to it.</p>
         <ul class="feat" style="font-size:16px;color:var(--ink)">
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> 180° open sea and mountain views</li>
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Two minutes' walk to the beach</li>
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> Breathtaking from sunrise to sunset</li>
+          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> <span data-t="sv1">180° open sea and mountain views</span></li>
+          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> <span data-t="sv2">Two minutes' walk to the beach</span></li>
+          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> <span data-t="sv3">Breathtaking from sunrise to sunset</span></li>
         </ul>
       </div>
-      <div class="media"><img src="assets/hero-curtain.jpg" alt="A terrace chair looking over the sea view from a Gaia residence" loading="lazy"><span class="media-cap">A view from the project</span></div>
+      <div class="media"><img src="assets/hero-curtain.jpg" alt="A terrace chair looking over the sea view from a Gaia residence" loading="lazy"><span class="media-cap" data-t="svCap">A view from the project</span></div>
     </div>
   </div>
 </section>
@@ -424,26 +438,26 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
     <div class="split rev">
       <div class="media"><img src="assets/finished-living.webp" alt="Living room of the finished, furnished Gaia residence with sea view" loading="lazy"></div>
       <div>
-        <div class="eyebrow">Experience It Yourself</div>
-        <h2>One residence is already finished. Come walk it.</h2>
-        <p class="intro"><strong>The show residence is standing right now, built, furnished and open for visits.</strong> This is exactly how yours arrives: fully finished and fully furnished, with nothing left for you to do. Walk the rooms, stand on the terrace, and feel it for yourself.</p>
+        <div class="eyebrow" data-t="coEye">Experience It Yourself</div>
+        <h2 data-t="coH2">One residence is already finished. Come walk it.</h2>
+        <p class="intro" data-t="coIntro"><strong>The show residence is standing right now, built, furnished and open for visits.</strong> This is exactly how yours arrives: fully finished and fully furnished, with nothing left for you to do. Walk the rooms, stand on the terrace, and feel the gentle breeze coming off the bay.</p>
         <div class="timeline">
-          <div class="tl"><div class="stage">Foundations</div><b>Complete</b><div class="done">✓ Done</div></div>
-          <div class="tl"><div class="stage">Structure</div><b>In progress</b></div>
-          <div class="tl"><div class="stage">Show Residence</div><b>Open now</b><div class="done">✓ Visit it</div></div>
-          <div class="tl"><div class="stage">First Handovers</div><b>Q4 2026</b></div>
+          <div class="tl"><div class="stage" data-t="tlFoundations">Foundations</div><b data-t="tlComplete">Complete</b><div class="done" data-t="tlDone">✓ Done</div></div>
+          <div class="tl"><div class="stage" data-t="tlStructure">Structure</div><b data-t="tlProgress">In progress</b></div>
+          <div class="tl"><div class="stage" data-t="tlShow">Show Residence</div><b data-t="tlOpen">Open now</b><div class="done" data-t="tlVisit">✓ Visit it</div></div>
+          <div class="tl"><div class="stage" data-t="tlHand">First Handovers</div><b>Q4 2026</b></div>
         </div>
-        <div class="eyebrow" style="margin:28px 0 2px">Built To Last</div>
+        <div class="eyebrow" style="margin:28px 0 2px" data-t="btlEye">Built To Last</div>
         <ul class="specs">
-          <li><b>CPAC tiled roof, 50-year lifespan</b> with 10cm thermal insulation. Most island villas use shingles that last just 5 to 7 years.</li>
-          <li><b>Double-layered cavity walls</b> insulated against heat, sound and moisture.</li>
-          <li><b>Reinforced concrete floors</b> with a waterproof membrane: zero moisture and full soundproofing between floors.</li>
-          <li><b>Coastal-grade aluminium frames and 10mm tempered glass</b> sliding systems, built for the sea air.</li>
+          <li data-t="spec1"><b>CPAC tiled roof, 50-year lifespan</b> with 10cm thermal insulation. Most other buildings use shingles that last just 5 to 7 years.</li>
+          <li data-t="spec2"><b>Double-layered cavity walls</b> insulated against heat, sound and moisture.</li>
+          <li data-t="spec3"><b>Reinforced concrete floors</b> with a waterproof membrane: zero moisture and full soundproofing between floors.</li>
+          <li data-t="spec4"><b>Coastal-grade aluminium frames and 10mm tempered glass</b> sliding systems, built for the sea air.</li>
         </ul>
         <div class="cta-row" style="margin-top:22px">
-          <a class="btn btn-gold" href="#" data-wa="viewing" data-msg="Hi Gaia, I'd like to walk through the finished residence. When can I visit?">
+          <a class="btn btn-gold" href="#" data-wa="viewing" data-msg="Hi Gaia, I'd like to walk through the finished residence. When can I visit?" data-msg-fr="Bonjour Gaia, j'aimerais visiter la résidence terminée. Quand puis-je venir ?">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            Book a walkthrough of the finished residence
+            <span data-t="coCta">Book a walkthrough of the finished residence</span>
           </a>
         </div>
       </div>
@@ -456,25 +470,25 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <button class="gthumb"><img src="assets/finished-bath1.jpg" alt="Bathroom" loading="lazy"></button>
       <button class="gthumb"><img src="assets/finished-plants2.webp" alt="Terrace with lounge chair" loading="lazy"></button>
     </div>
-    <p class="gcap" style="text-align:center">Real photos of the finished, furnished residence. Tap any photo to explore the full set.</p>
+    <p class="gcap" style="text-align:center" data-t="coGcap">Real photos of the finished, furnished residence. Tap any photo to explore the full set.</p>
   </div>
 </section>
 
 <!-- ============ RESORT LIFE / AMENITIES ============ -->
 <section class="section amenities" style="background:var(--sand)" data-ab="amenities">
   <div class="wrap">
-    <div class="eyebrow">Resort Life</div>
-    <h2>A wellness resort you live inside.</h2>
-    <p class="intro">Sauna overlooking the bay, yoga in the trees, a café where your laptop faces the sea. Life at Gaia feels like a resort, because it is one.</p>
+    <div class="eyebrow" data-t="amEye">Resort Life</div>
+    <h2 data-t="amH2">A wellness resort you live inside.</h2>
+    <p class="intro" data-t="amIntro">Sauna overlooking the bay, yoga in the trees, a café where your laptop faces the sea. Life at Gaia feels like a resort, because it is one.</p>
     <div class="amen-grid">
-      <div class="amen-card"><img src="assets/amenity-sauna.jpg" alt="Spa sauna with sea view" loading="lazy"><div class="cap"><h3>Sauna & Ice Bath</h3><p>A traditional wood sauna and cold plunge for recovery, overlooking the bay.</p></div></div>
-      <div class="amen-card"><img src="assets/amenity-cafe-pool.jpg" alt="Café, pool terrace and co-working" loading="lazy"><div class="cap"><h3>Café, Pool & Co-Working</h3><p>A boho-chic 3-tier café with sea views, pool terrace and air-conditioned co-working.</p></div></div>
-      <div class="amen-card"><img src="assets/amenity-yoga.jpg" alt="Yoga shala overlooking the bay" loading="lazy"><div class="cap"><h3>Yoga Shala</h3><p>A dedicated movement space set into the grounds, open to the bay.</p></div></div>
+      <div class="amen-card"><img src="assets/amenity-sauna.jpg" alt="Spa sauna with sea view" loading="lazy"><div class="cap"><h3 data-t="am1h">Sauna & Ice Bath</h3><p data-t="am1p">A traditional wood sauna and cold plunge for recovery, overlooking the bay.</p></div></div>
+      <div class="amen-card"><img src="assets/amenity-cafe-pool.jpg" alt="Café, pool terrace and co-working" loading="lazy"><div class="cap"><h3 data-t="am2h">Café, Pool & Co-Working</h3><p data-t="am2p">A boho-chic 3-tier café with sea views, pool terrace and air-conditioned co-working.</p></div></div>
+      <div class="amen-card"><img src="assets/amenity-yoga.jpg" alt="Yoga shala overlooking the bay" loading="lazy"><div class="cap"><h3 data-t="am3h">Yoga Shala</h3><p data-t="am3p">A dedicated movement space set into the grounds, open to the bay.</p></div></div>
     </div>
     <div class="amen-extra">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>On-site gym</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>On-site daycare centre</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Reception & 5-star housekeeping</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span data-t="amx1">On-site gym</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span data-t="amx2">On-site daycare centre</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span data-t="amx3">Reception & 5-star housekeeping</span></span>
     </div>
   </div>
 </section>
@@ -484,24 +498,24 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
      life on KPG), upgrade these bios with direct quotes or a video like the buyer one. -->
 <section class="section dark" data-ab="founders">
   <div class="wrap">
-    <div class="eyebrow">The People Behind Gaia</div>
-    <h2>Built by two people who chose this island.</h2>
-    <p class="intro">Gaia isn't a faceless developer. It's two founders who live on Koh Phangan, build here, and will happily walk you through the site themselves.</p>
+    <div class="eyebrow" data-t="foEye">The People Behind Gaia</div>
+    <h2 data-t="foH2">Built by two people who chose this island.</h2>
+    <p class="intro" data-t="foIntro">Gaia isn't a faceless developer. It's two founders who live on Koh Phangan, build here, and will happily walk you through the site themselves.</p>
     <div class="founders" style="border-top:none;padding-top:0;margin-top:30px">
       <div class="founder">
         <img src="assets/team-waltz.png" alt="Mr David Waltz">
         <div>
           <span class="fname">Mr David Waltz</span>
-          <span class="frole">Founder &amp; Developer</span>
-          <p>David found Koh Phangan through a decade of building across the USA and Thailand, and stayed. Fluent in Thai, he built the island's Rasaruna Retreat Centre and Bliss Project before Gaia, and still oversees every stage of the build himself.</p>
+          <span class="frole" data-t="foRole1">Founder &amp; Developer</span>
+          <p data-t="foBio1">David found Koh Phangan through a decade of building across the USA and Thailand, and stayed. Fluent in Thai, he built the island's Rasaruna Retreat Centre and Bliss Project before Gaia, and still oversees every stage of the build himself.</p>
         </div>
       </div>
       <div class="founder">
         <img src="assets/team-goodman.jpeg" alt="Dr David Goodman">
         <div>
           <span class="fname">Dr David Goodman</span>
-          <span class="frole">Founder &amp; Developer</span>
-          <p>A British scientist who came to the island seven years ago and never left. He has spent those years learning what tropical sun, salt and rain do to a house, and engineering Gaia so they never win. If your home stays cool and dry, that's him.</p>
+          <span class="frole" data-t="foRole2">Founder &amp; Developer</span>
+          <p data-t="foBio2">A British scientist who came to the island seven years ago and never left. He has spent those years learning what tropical sun, salt and rain do to a house, and engineering Gaia so they never win. If your home stays cool and dry, that's him.</p>
         </div>
       </div>
     </div>
@@ -511,20 +525,20 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ INVESTOR CASE ============ -->
 <section class="section invest-light" data-ab="investment">
   <div class="wrap">
-    <div class="eyebrow">A Home That Pays For Itself</div>
-    <h2>Sea-view lifestyle, hands-off income.</h2>
-    <p class="intro">Live in it, or let our team run it as a turnkey rental. We handle the bookings, the guests and the upkeep, you collect the returns.</p>
+    <div class="eyebrow" data-t="inEye">A Home That Pays For Itself</div>
+    <h2 data-t="inH2">Sea-view lifestyle, hands-off income.</h2>
+    <p class="intro" data-t="inIntro">Live in it, or let our team run it as a turnkey rental. We handle the bookings, the guests and the upkeep, you collect the returns.</p>
     <div class="stats">
-      <div class="stat"><div class="num"><span class="upto">up to</span>15.3%</div><div class="lbl">Projected annual ROI</div></div>
-      <div class="stat"><div class="num">~6.5 yr</div><div class="lbl">Projected payback period</div></div>
-      <div class="stat"><div class="num">100%</div><div class="lbl">Fully managed & turnkey</div></div>
+      <div class="stat"><div class="num"><span class="upto" data-t="inUpto">up to</span>15.3%</div><div class="lbl" data-t="inLbl1">Projected annual ROI</div></div>
+      <div class="stat"><div class="num" data-t="inNum2">~6.5 yr</div><div class="lbl" data-t="inLbl2">Projected payback period</div></div>
+      <div class="stat"><div class="num">100%</div><div class="lbl" data-t="inLbl3">Fully managed & turnkey</div></div>
     </div>
-    <p class="rationale">Powered by Chaloklum's wellness-tourism demand and Gaia's own spa, gym and co-working resort, which keep occupancy high year-round. Run end-to-end by our in-house team, so it stays genuinely hands-off for you.</p>
-    <p class="compliance">Projected returns based on current rental performance and management modelling. Returns are not guaranteed and may vary.</p>
+    <p class="rationale" data-t="inRat">Powered by Chaloklum's wellness-tourism demand and Gaia's own spa, gym and co-working resort, which keep occupancy high year-round. Run end-to-end by our in-house team, so it stays genuinely hands-off for you.</p>
+    <p class="compliance" data-t="inComp">Projected returns based on current rental performance and management modelling. Returns are not guaranteed and may vary.</p>
     <div class="cta-row" style="margin-top:26px">
-      <a class="btn btn-wa" href="#" data-wa="investment" data-msg="Hi Gaia, I'd like to see the investment & ROI breakdown for the residences.">
+      <a class="btn btn-wa" href="#" data-wa="investment" data-msg="Hi Gaia, I'd like to see the investment & ROI breakdown for the residences." data-msg-fr="Bonjour Gaia, j'aimerais voir le détail de l'investissement et du ROI des résidences.">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-        Get the investment breakdown
+        <span data-t="inCta">Get the investment breakdown</span>
       </a>
     </div>
   </div>
@@ -533,30 +547,30 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ SAFE OWNERSHIP ============ -->
 <section class="section dark" data-ab="ownership">
   <div class="wrap">
-    <div class="eyebrow">Ownership You Can Trust</div>
-    <h2>100% safe, and 100% yours.</h2>
-    <p class="intro">Your residence is held on a registered leasehold in your own name, fully compliant with Thai law, with your own lawyer guiding every step.</p>
+    <div class="eyebrow" data-t="owEye">Ownership You Can Trust</div>
+    <h2 data-t="owH2">100% safe, and 100% yours.</h2>
+    <p class="intro" data-t="owIntro">Your residence is held on a registered leasehold in your own name, fully compliant with Thai law, with your own lawyer guiding every step.</p>
     <div class="cards3">
       <div class="ocard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/></svg>
-        <h3>Registered Leasehold</h3>
-        <p>Registered at the land office in your own name, on a clear leasehold title.</p>
+        <h3 data-t="ow1h">Registered Leasehold</h3>
+        <p data-t="ow1p">Registered at the land office in your own name, on a clear leasehold title.</p>
       </div>
       <div class="ocard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-        <h3>Held In Your Name</h3>
-        <p>Owned directly by you, with no nominee company. Simple, transparent and secure.</p>
+        <h3 data-t="ow2h">Held In Your Name</h3>
+        <p data-t="ow2p">Owned directly by you, with no nominee company. Simple, transparent and secure.</p>
       </div>
       <div class="ocard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V5h6v2"/></svg>
-        <h3>Compliant With Thai Law</h3>
-        <p>Your dedicated English-speaking lawyer makes sure every step is fully legal and compliant.</p>
+        <h3 data-t="ow3h">Compliant With Thai Law</h3>
+        <p data-t="ow3p">Your dedicated English-speaking lawyer makes sure every step is fully legal and compliant.</p>
       </div>
     </div>
     <div class="cta-row" style="margin-top:34px">
-      <a class="btn btn-wa" href="#" data-wa="ownership" data-msg="Hi Gaia, I'd like to understand the ownership and leasehold structure. Can you explain?">
+      <a class="btn btn-wa" href="#" data-wa="ownership" data-msg="Hi Gaia, I'd like to understand the ownership and leasehold structure. Can you explain?" data-msg-fr="Bonjour Gaia, j'aimerais comprendre la structure de propriété et de bail. Pouvez-vous m'expliquer ?">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-        Ask us anything on WhatsApp
+        <span data-t="owCta">Ask us anything on WhatsApp</span>
       </a>
     </div>
   </div>
@@ -565,10 +579,10 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ RESIDENCES ============ -->
 <section class="section" style="background:var(--sand)" data-ab="residences">
   <div class="wrap">
-    <div class="eyebrow" style="text-align:center">The Residences</div>
-    <h2 style="text-align:center;margin:12px auto 12px;max-width:none">Choose your sea-view home</h2>
-    <p class="intro" style="text-align:center;margin:0 auto 6px">From <strong>฿6.9M</strong> for a 103 m² residence, delivered fully finished and furnished, ready to move in.</p>
-    <p style="text-align:center;font-size:12px;color:var(--muted);margin:0 auto 30px;font-weight:300">Excludes transfer fees and taxes.</p>
+    <div class="eyebrow" style="text-align:center" data-t="reEye">The Residences</div>
+    <h2 style="text-align:center;margin:12px auto 12px;max-width:none" data-t="reH2">Choose your sea-view home</h2>
+    <p class="intro" style="text-align:center;margin:0 auto 6px" data-t="reIntro">From <strong>฿6.9M</strong> for a 103 m² residence, delivered fully finished and furnished, ready to move in.</p>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin:0 auto 30px;font-weight:300" data-t="reCav">Excludes transfer fees and taxes.</p>
     <div class="units">
       <div class="unit">
         <div class="carousel" data-carousel>
@@ -584,16 +598,18 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
           <div class="car-dots"></div>
         </div>
         <div class="ub">
-          <h3>1–2 Bedroom</h3>
-          <div class="size">from 103 m² · Highest rental yield</div>
-          <ul class="feat"><li>180° sea view</li><li>Fully finished &amp; furnished</li><li>Private garden on the first floor</li><li>Turnkey managed rental</li></ul>
-          <a class="btn btn-gold" href="#" data-wa="unit-1-2br" data-msg="Hi Gaia, I'm interested in the 1–2 bedroom residences (from ฿6.9M). Can you send details?">Enquire for this unit</a>
+          <h3 data-t="u1h">1–2 Bedroom</h3>
+          <div class="size" data-t="u1s">from 103 m² · Highest rental yield</div>
+          <ul class="feat"><li data-t="u1f1">180° sea view</li><li data-t="u1f2">Fully finished &amp; furnished</li><li data-t="u1f3">Private garden on the first floor</li><li data-t="u1f4">Turnkey managed rental</li></ul>
+          <a class="btn btn-gold" href="#" data-wa="unit-1-2br" data-msg="Hi Gaia, I'm interested in the 1–2 bedroom residences (from ฿6.9M). Can you send details?" data-msg-fr="Bonjour Gaia, je suis intéressé(e) par les résidences 1–2 chambres (à partir de 6,9M฿). Pouvez-vous m'envoyer les détails ?"><span data-t="uBtn1">Enquire for this unit</span></a>
         </div>
       </div>
       <div class="unit">
         <div class="carousel" data-carousel>
           <div class="carousel-track">
             <img src="assets/res-living2.webp" alt="3 bedroom living room with sea view" loading="lazy">
+            <img src="assets/res-duplex-living.jpg" alt="3 bedroom open living and kitchen" loading="lazy">
+            <img src="assets/res-duplex-dining.jpg" alt="3 bedroom dining area" loading="lazy">
             <img src="assets/res-bedroom-viz.jpg" alt="3 bedroom master bedroom" loading="lazy">
           </div>
           <button class="car-arrow car-prev" aria-label="Previous photo">‹</button>
@@ -601,10 +617,10 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
           <div class="car-dots"></div>
         </div>
         <div class="ub">
-          <h3>3 Bedroom</h3>
-          <div class="size">from 206 m² · Family & space</div>
-          <ul class="feat"><li>Double-size sea-view living</li><li>Fully finished &amp; furnished</li><li>Ideal for families or sharing</li><li>Turnkey managed rental</li></ul>
-          <a class="btn btn-gold" href="#" data-wa="unit-3br" data-msg="Hi Gaia, I'm interested in the 3 bedroom residences. Can you send details?">Enquire for this unit</a>
+          <h3 data-t="u2h">3 Bedroom</h3>
+          <div class="size" data-t="u2s">from 206 m² · Family & space</div>
+          <ul class="feat"><li data-t="u2f1">Double-size sea-view living</li><li data-t="u2f2">Fully finished &amp; furnished</li><li data-t="u2f3">Ideal for families or sharing</li><li data-t="u2f4">Turnkey managed rental</li></ul>
+          <a class="btn btn-gold" href="#" data-wa="unit-3br" data-msg="Hi Gaia, I'm interested in the 3 bedroom residences. Can you send details?" data-msg-fr="Bonjour Gaia, je suis intéressé(e) par les résidences 3 chambres. Pouvez-vous m'envoyer les détails ?"><span data-t="uBtn2">Enquire for this unit</span></a>
         </div>
       </div>
       <div class="unit">
@@ -622,16 +638,16 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
           <div class="car-dots"></div>
         </div>
         <div class="ub">
-          <h3>Penthouse Collection</h3>
-          <div class="size">103–206 m² · Top floor</div>
-          <ul class="feat"><li>Up to 4.7m ceilings</li><li>The most open views at Gaia</li><li>Fully finished &amp; furnished, private terrace</li><li>Turnkey managed rental</li></ul>
-          <a class="btn btn-gold" href="#" data-wa="unit-penthouse" data-msg="Hi Gaia, I'm interested in the Penthouse Collection. Can you send details?">Enquire for this unit</a>
+          <h3 data-t="u3h">Penthouse Collection</h3>
+          <div class="size" data-t="u3s">103–206 m² · Top floor</div>
+          <ul class="feat"><li data-t="u3f1">Up to 4.7m ceilings</li><li data-t="u3f2">The most open views at Gaia</li><li data-t="u3f3">Fully finished &amp; furnished, private terrace</li><li data-t="u3f4">Turnkey managed rental</li></ul>
+          <a class="btn btn-gold" href="#" data-wa="unit-penthouse" data-msg="Hi Gaia, I'm interested in the Penthouse Collection. Can you send details?" data-msg-fr="Bonjour Gaia, je suis intéressé(e) par la Collection Penthouse. Pouvez-vous m'envoyer les détails ?"><span data-t="uBtn3">Enquire for this unit</span></a>
         </div>
       </div>
     </div>
     <div class="siteplan">
       <img src="assets/site-plan.jpeg" alt="Gaia Residence site plan with current availability" loading="lazy" style="max-width:760px;width:100%">
-      <p>60% of the project is now reserved. Tap the map to enlarge.</p>
+      <p data-t="reSite">60% of the project is now reserved. Tap the map to enlarge.</p>
     </div>
   </div>
 </section>
@@ -647,12 +663,12 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <span class="sep"></span>
       <span class="stars">★★★★★</span><span class="score">5.0</span>
     </a>
-    <h2 style="margin:18px auto 14px;max-width:18ch">Five stars. Every single review.</h2>
-    <p class="intro" style="margin:0 auto 26px">Buyers and visitors rate Gaia 5.0 on Google. Read what they say, then come see why in person.</p>
+    <h2 style="margin:18px auto 14px;max-width:18ch" data-t="prH2">Five stars. Every single review.</h2>
+    <p class="intro" style="margin:0 auto 26px" data-t="prIntro">Buyers and visitors rate Gaia 5.0 on Google. Read what they say, then come see why in person.</p>
     <div class="cta-row" style="justify-content:center;margin-bottom:6px">
       <a class="btn btn-gold" href="#" data-google>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:18px;height:18px"><path d="M12 17.3 6.2 20l1.1-6.5L2.5 9l6.6-1L12 2l2.9 6 6.6 1-4.8 4.5 1.1 6.5z"/></svg>
-        Read the reviews on Google
+        <span data-t="prCta">Read the reviews on Google</span>
       </a>
     </div>
     <!-- Buyer testimonial video. Paste the YouTube video ID into TESTIMONIAL_VIDEO_ID
@@ -662,7 +678,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <img src="assets/video-poster.jpg" alt="A Gaia buyer shares their experience" loading="lazy">
         <span class="vplay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </button>
-      <p class="vcap">Hear it from a Gaia buyer</p>
+      <p class="vcap" data-t="prVcap">Hear it from a Gaia buyer</p>
     </div>
     <div class="quotes" style="grid-template-columns:1fr;max-width:640px;margin:36px auto 0;text-align:left;gap:16px">
       <div class="quote">
@@ -687,15 +703,15 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ FINAL CTA ============ -->
 <section class="section finalcta" data-ab="final">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--gold-light)">60% Reserved · Stage Pricing Won't Last</div>
-    <h2>Speak to us today. Viewings open this week.</h2>
-    <p>Message us on WhatsApp for prices, availability and to book a walkthrough of the finished residence. We reply within minutes.</p>
+    <div class="eyebrow" style="color:var(--gold-light)" data-t="fcEye">60% Reserved · Stage Pricing Won't Last</div>
+    <h2 data-t="fcH2">Speak to us today. Viewings open this week.</h2>
+    <p data-t="fcP">Message us on WhatsApp for prices, availability and to book a walkthrough of the finished residence. We reply within minutes.</p>
     <div class="cta-row">
-      <a class="btn btn-wa" href="#" data-wa="final" data-msg="Hi Gaia, I'd like to talk about the sea-view residences and book a viewing.">
+      <a class="btn btn-wa" href="#" data-wa="final" data-msg="Hi Gaia, I'd like to talk about the sea-view residences and book a viewing." data-msg-fr="Bonjour Gaia, j'aimerais discuter des résidences vue mer et réserver une visite.">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-        Chat on WhatsApp
+        <span data-t="waChat">Chat on WhatsApp</span>
       </a>
-      <button class="btn btn-gold" data-quiz>Find your residence →</button>
+      <button class="btn btn-gold" data-quiz data-t="fcQuiz">Find your residence →</button>
     </div>
   </div>
 </section>
@@ -709,20 +725,20 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
       <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;opacity:.55;margin-top:5px">Koh Phangan</div>
     </div>
     <div>
-      WhatsApp: <a href="#" data-wa="footer" data-msg="Hi Gaia, I'd like more information about the residences.">+66 93 618 4244</a> &nbsp;·&nbsp;
+      WhatsApp: <a href="#" data-wa="footer" data-msg="Hi Gaia, I'd like more information about the residences." data-msg-fr="Bonjour Gaia, j'aimerais plus d'informations sur les résidences.">+66 93 618 4244</a> &nbsp;·&nbsp;
       <a href="mailto:hello@gaia-residence.com">hello@gaia-residence.com</a>
     </div>
   </div>
-  <div class="wrap"><p class="disc">Chaloklum, Koh Phangan, Thailand. Prices and availability subject to change. registered leasehold. Projected returns are based on current rental modelling, are not guaranteed and may vary. This page is for information only and does not constitute financial or legal advice.</p></div>
+  <div class="wrap"><p class="disc" data-t="footDisc">Chaloklum, Koh Phangan, Thailand. Prices and availability subject to change. registered leasehold. Projected returns are based on current rental modelling, are not guaranteed and may vary. This page is for information only and does not constitute financial or legal advice.</p></div>
 </footer>
 
 <!-- ============ STICKY MOBILE BAR ============ -->
 <div class="mobar">
-  <a class="btn btn-wa" href="#" data-wa="mobile-bar" data-msg="Hi Gaia, I'm interested in the sea-view residences.">
+  <a class="btn btn-wa" href="#" data-wa="mobile-bar" data-msg="Hi Gaia, I'm interested in the sea-view residences." data-msg-fr="Bonjour Gaia, je suis intéressé(e) par les résidences vue mer.">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-    Chat
+    <span data-t="mbChat">Chat</span>
   </a>
-  <button class="btn btn-gold" data-quiz>See it in person</button>
+  <button class="btn btn-gold" data-quiz data-t="mbSee">See it in person</button>
 </div>
 
 <!-- ============ LIGHTBOX ============ -->
@@ -739,50 +755,50 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="qbox">
     <div class="qhead">
       <button class="qclose" data-qclose>&times;</button>
-      <h3>Find your residence</h3>
-      <p>3 quick questions, then we'll send you matched options on WhatsApp.</p>
+      <h3 data-t="qTitle">Find your residence</h3>
+      <p data-t="qSub">3 quick questions, then we'll send you matched options on WhatsApp.</p>
       <div class="qbar"><i id="qprog"></i></div>
     </div>
     <div class="qbody">
       <!-- step 1 -->
       <div class="qstep active" data-step="1">
-        <h4>What's your budget?</h4>
-        <div class="sub">So we only send relevant residences.</div>
-        <button class="qopt" data-q="budget" data-v="฿6.9M – ฿9M">฿6.9M – ฿9M</button>
-        <button class="qopt" data-q="budget" data-v="฿9M – ฿13M">฿9M – ฿13M</button>
-        <button class="qopt" data-q="budget" data-v="฿13M+">฿13M+ / Penthouse</button>
-        <button class="qopt" data-q="budget" data-v="Still exploring">Still exploring</button>
+        <h4 data-t="q1h">What's your budget?</h4>
+        <div class="sub" data-t="q1s">So we only send relevant residences.</div>
+        <button class="qopt" data-q="budget" data-v="฿6.9M – ฿9M" data-t="q1o1">฿6.9M – ฿9M</button>
+        <button class="qopt" data-q="budget" data-v="฿9M – ฿13M" data-t="q1o2">฿9M – ฿13M</button>
+        <button class="qopt" data-q="budget" data-v="฿13M+" data-t="q1o3">฿13M+ / Penthouse</button>
+        <button class="qopt" data-q="budget" data-v="Still exploring" data-t="q1o4">Still exploring</button>
       </div>
       <!-- step 2 -->
       <div class="qstep" data-step="2">
-        <h4>Which residence fits?</h4>
-        <div class="sub">Pick the closest, we'll refine on chat.</div>
-        <button class="qopt" data-q="unit" data-v="1–2 Bedroom (103m²)">1–2 Bedroom · 103 m²</button>
-        <button class="qopt" data-q="unit" data-v="3 Bedroom (206m²)">3 Bedroom · 206 m²</button>
-        <button class="qopt" data-q="unit" data-v="Penthouse">Penthouse Collection</button>
-        <button class="qopt" data-q="unit" data-v="Not sure yet">Not sure yet</button>
-        <div class="qnav"><button class="qback" data-qback>← Back</button></div>
+        <h4 data-t="q2h">Which residence fits?</h4>
+        <div class="sub" data-t="q2s">Pick the closest, we'll refine on chat.</div>
+        <button class="qopt" data-q="unit" data-v="1–2 Bedroom (103m²)" data-t="q2o1">1–2 Bedroom · 103 m²</button>
+        <button class="qopt" data-q="unit" data-v="3 Bedroom (206m²)" data-t="q2o2">3 Bedroom · 206 m²</button>
+        <button class="qopt" data-q="unit" data-v="Penthouse" data-t="q2o3">Penthouse Collection</button>
+        <button class="qopt" data-q="unit" data-v="Not sure yet" data-t="q2o4">Not sure yet</button>
+        <div class="qnav"><button class="qback" data-qback data-t="qBack">← Back</button></div>
       </div>
       <!-- step 3 -->
       <div class="qstep" data-step="3">
-        <h4>What matters most to you?</h4>
-        <div class="sub">Lifestyle home or rental income?</div>
-        <button class="qopt" data-q="goal" data-v="Rental income / ROI">Rental income / ROI</button>
-        <button class="qopt" data-q="goal" data-v="A home to use myself">A home to use myself</button>
-        <button class="qopt" data-q="goal" data-v="Both">Both</button>
-        <div class="qnav"><button class="qback" data-qback>← Back</button></div>
+        <h4 data-t="q3h">What matters most to you?</h4>
+        <div class="sub" data-t="q3s">Lifestyle home or rental income?</div>
+        <button class="qopt" data-q="goal" data-v="Rental income / ROI" data-t="q3o1">Rental income / ROI</button>
+        <button class="qopt" data-q="goal" data-v="A home to use myself" data-t="q3o2">A home to use myself</button>
+        <button class="qopt" data-q="goal" data-v="Both" data-t="q3o3">Both</button>
+        <div class="qnav"><button class="qback" data-qback data-t="qBack">← Back</button></div>
       </div>
       <!-- step 4: handoff -->
       <div class="qstep" data-step="4">
-        <h4>Where should we send your matches?</h4>
-        <div class="sub">We'll continue on WhatsApp and reply within minutes.</div>
+        <h4 data-t="q4h">Where should we send your matches?</h4>
+        <div class="sub" data-t="q4s">We'll continue on WhatsApp and reply within minutes.</div>
         <div class="qsummary" id="qsum"></div>
-        <input class="qfield" id="qname" type="text" placeholder="Your first name" autocomplete="given-name">
+        <input class="qfield" id="qname" type="text" placeholder="Your first name" data-ph-fr="Votre prénom" autocomplete="given-name">
         <a class="btn btn-wa" id="qsend" href="#" style="width:100%">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
-          Get my matches on WhatsApp
+          <span data-t="q4send">Get my matches on WhatsApp</span>
         </a>
-        <div class="qnav"><button class="qback" data-qback>← Back</button></div>
+        <div class="qnav"><button class="qback" data-qback data-t="qBack">← Back</button></div>
       </div>
     </div>
   </div>
@@ -793,6 +809,145 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 var WA_NUMBER = '66936184244';                 // +66 93 618 4244
 var GOOGLE_REVIEWS_URL = 'https://share.google/BiW8fQNsZatFw2ZkL';
 var TESTIMONIAL_VIDEO_ID = 'u6Zi9MD7J7g';       // buyer testimonial (YouTube Short, vertical)
+
+/* ====== I18N (EN / FR toggle) ====== */
+var LANG = 'en';
+var FR = {
+  waChat:"Discuter sur WhatsApp",
+  heroH1:"La mer, la première chose que vous verrez.",
+  heroLead:"Des résidences vue mer entièrement finies et meublées à partir de 6,9M฿, à deux minutes au-dessus de la baie de Chaloklum, Koh Phangan.",
+  svEye:"La Vue",
+  svH2:"Le genre de vue pour laquelle on réorganise sa journée.",
+  svIntro:"Chaque résidence Gaia s'ouvre sur un panorama complet à 180° de la baie de Chaloklum. La mer en face, les montagnes verdoyantes qui l'encadrent, la plage à deux minutes en contrebas. On s'y réveille, on travaille à côté, et on ne s'y habitue jamais vraiment.",
+  sv1:"Vue mer et montagne dégagée à 180°",
+  sv2:"Deux minutes à pied de la plage",
+  sv3:"À couper le souffle, du lever au coucher du soleil",
+  svCap:"Une vue depuis le projet",
+  coEye:"Vivez-le par vous-même",
+  coH2:"Une résidence est déjà terminée. Venez la visiter.",
+  coIntro:"<strong>La résidence témoin est déjà debout, construite, meublée et ouverte aux visites.</strong> C'est exactement ainsi que la vôtre sera livrée : entièrement finie et meublée, sans rien à faire de votre côté. Parcourez les pièces, tenez-vous sur la terrasse et sentez la douce brise qui monte de la baie.",
+  tlFoundations:"Fondations", tlComplete:"Terminées", tlDone:"✓ Fait",
+  tlStructure:"Structure", tlProgress:"En cours",
+  tlShow:"Résidence témoin", tlOpen:"Ouverte", tlVisit:"✓ À visiter",
+  tlHand:"Premières livraisons",
+  btlEye:"Construite pour durer",
+  spec1:"<b>Toiture en tuiles CPAC, durée de vie de 50 ans</b> avec 10 cm d'isolation thermique. La plupart des autres bâtiments utilisent des bardeaux qui ne durent que 5 à 7 ans.",
+  spec2:"<b>Murs à double paroi</b> isolés contre la chaleur, le bruit et l'humidité.",
+  spec3:"<b>Planchers en béton armé</b> avec membrane d'étanchéité : aucune humidité et une isolation phonique totale entre les étages.",
+  spec4:"<b>Cadres en aluminium qualité marine et baies vitrées en verre trempé de 10 mm</b>, conçus pour l'air marin.",
+  coCta:"Réservez une visite de la résidence terminée",
+  coGcap:"Photos réelles de la résidence terminée et meublée. Touchez une photo pour voir toute la série.",
+  amEye:"La vie en resort",
+  amH2:"Un resort bien-être où l'on vit.",
+  amIntro:"Sauna surplombant la baie, yoga au milieu des arbres, un café où votre ordinateur fait face à la mer. La vie à Gaia ressemble à un resort, parce que c'en est un.",
+  am1h:"Sauna et bain froid",
+  am1p:"Un sauna traditionnel en bois et un bain froid pour la récupération, avec vue sur la baie.",
+  am2h:"Café, piscine et co-working",
+  am2p:"Un café bohème-chic sur trois niveaux avec vue mer, terrasse de piscine et espace de co-working climatisé.",
+  am3h:"Shala de yoga",
+  am3p:"Un espace de mouvement dédié, niché dans le domaine et ouvert sur la baie.",
+  amx1:"Salle de sport sur place",
+  amx2:"Crèche sur place",
+  amx3:"Réception et ménage 5 étoiles",
+  foEye:"Les personnes derrière Gaia",
+  foH2:"Bâti par deux personnes qui ont choisi cette île.",
+  foIntro:"Gaia n'est pas un promoteur anonyme. Ce sont deux fondateurs qui vivent à Koh Phangan, qui construisent ici, et qui se feront un plaisir de vous faire visiter le site eux-mêmes.",
+  foRole1:"Fondateur et promoteur",
+  foBio1:"David a découvert Koh Phangan après une décennie de construction aux États-Unis et en Thaïlande, et il y est resté. Parlant couramment le thaï, il a bâti le centre de retraite Rasaruna et le Bliss Project de l'île avant Gaia, et supervise encore lui-même chaque étape du chantier.",
+  foRole2:"Fondateur et promoteur",
+  foBio2:"Un scientifique britannique arrivé sur l'île il y a sept ans et qui n'est jamais reparti. Il a passé ces années à comprendre ce que le soleil tropical, le sel et la pluie font à une maison, et à concevoir Gaia pour qu'ils n'aient jamais le dernier mot. Si votre logement reste frais et sec, c'est grâce à lui.",
+  inEye:"Un logement qui se rembourse tout seul",
+  inH2:"Un art de vivre vue mer, des revenus sans effort.",
+  inIntro:"Habitez-la, ou laissez notre équipe la gérer en location clé en main. Nous nous occupons des réservations, des voyageurs et de l'entretien, vous percevez les revenus.",
+  inUpto:"jusqu'à",
+  inLbl1:"ROI annuel projeté",
+  inNum2:"~6,5 ans",
+  inLbl2:"Retour sur investissement projeté",
+  inLbl3:"Entièrement géré et clé en main",
+  inRat:"Portée par la demande du tourisme bien-être de Chaloklum et par le resort de Gaia lui-même, avec spa, salle de sport et co-working, qui maintiennent un taux d'occupation élevé toute l'année. Gérée de A à Z par notre équipe interne, pour rester véritablement sans effort pour vous.",
+  inComp:"Rendements projetés basés sur les performances locatives actuelles et la modélisation de gestion. Les rendements ne sont pas garantis et peuvent varier.",
+  inCta:"Recevoir le détail de l'investissement",
+  owEye:"Une propriété en toute confiance",
+  owH2:"100% sûr, et 100% à vous.",
+  owIntro:"Votre résidence est détenue sous un bail enregistré à votre nom, en pleine conformité avec la loi thaïlandaise, avec votre propre avocat qui vous guide à chaque étape.",
+  ow1h:"Bail enregistré",
+  ow1p:"Enregistré au cadastre à votre nom, sur un titre de bail clair.",
+  ow2h:"Détenu à votre nom",
+  ow2p:"Détenu directement par vous, sans société prête-nom. Simple, transparent et sécurisé.",
+  ow3h:"Conforme à la loi thaïlandaise",
+  ow3p:"Votre avocat dédié, anglophone, veille à ce que chaque étape soit parfaitement légale et conforme.",
+  owCta:"Posez-nous toutes vos questions sur WhatsApp",
+  reEye:"Les Résidences",
+  reH2:"Choisissez votre résidence vue mer",
+  reIntro:"À partir de <strong>6,9M฿</strong> pour une résidence de 103 m², livrée entièrement finie et meublée, prête à emménager.",
+  reCav:"Hors frais de transfert et taxes.",
+  u1h:"1–2 chambres", u1s:"à partir de 103 m² · Meilleur rendement locatif",
+  u1f1:"Vue mer à 180°", u1f2:"Entièrement finie et meublée", u1f3:"Jardin privatif au premier niveau", u1f4:"Location clé en main gérée", uBtn1:"Demander des infos",
+  u2h:"3 chambres", u2s:"à partir de 206 m² · Espace et famille",
+  u2f1:"Double séjour vue mer", u2f2:"Entièrement finie et meublée", u2f3:"Idéale pour les familles ou la colocation", u2f4:"Location clé en main gérée", uBtn2:"Demander des infos",
+  u3h:"Collection Penthouse", u3s:"103–206 m² · Dernier étage",
+  u3f1:"Hauteurs sous plafond jusqu'à 4,7 m", u3f2:"Les vues les plus dégagées de Gaia", u3f3:"Entièrement finie et meublée, terrasse privative", u3f4:"Location clé en main gérée", uBtn3:"Demander des infos",
+  reSite:"60% du projet est déjà réservé. Touchez le plan pour l'agrandir.",
+  prH2:"Cinq étoiles. Sur chaque avis.",
+  prIntro:"Acheteurs et visiteurs notent Gaia 5,0 sur Google. Lisez ce qu'ils en disent, puis venez le constater en personne.",
+  prCta:"Lire les avis sur Google",
+  prVcap:"Écoutez un acheteur de Gaia",
+  fcEye:"60% réservé · Les prix de lancement ne dureront pas",
+  fcH2:"Parlons-en aujourd'hui. Visites ouvertes cette semaine.",
+  fcP:"Écrivez-nous sur WhatsApp pour les prix, les disponibilités et pour réserver une visite de la résidence terminée. Nous répondons en quelques minutes.",
+  fcQuiz:"Trouvez votre résidence →",
+  footDisc:"Chaloklum, Koh Phangan, Thaïlande. Prix et disponibilités susceptibles de changer. Bail enregistré. Les rendements projetés reposent sur une modélisation locative actuelle, ne sont pas garantis et peuvent varier. Cette page est fournie à titre informatif uniquement et ne constitue pas un conseil financier ou juridique.",
+  mbChat:"Discuter", mbSee:"Voir en personne",
+  qTitle:"Trouvez votre résidence",
+  qSub:"3 questions rapides, puis nous vous envoyons des options adaptées sur WhatsApp.",
+  q1h:"Quel est votre budget ?", q1s:"Pour ne vous envoyer que des résidences pertinentes.",
+  q1o1:"6,9M฿ – 9M฿", q1o2:"9M฿ – 13M฿", q1o3:"13M฿+ / Penthouse", q1o4:"Encore en réflexion",
+  q2h:"Quelle résidence vous convient ?", q2s:"Choisissez la plus proche, on affinera par message.",
+  q2o1:"1–2 chambres · 103 m²", q2o2:"3 chambres · 206 m²", q2o3:"Collection Penthouse", q2o4:"Pas encore sûr(e)",
+  q3h:"Qu'est-ce qui compte le plus pour vous ?", q3s:"Résidence plaisir ou revenu locatif ?",
+  q3o1:"Revenu locatif / ROI", q3o2:"Un logement pour moi-même", q3o3:"Les deux",
+  q4h:"Où envoyer vos correspondances ?", q4s:"Nous continuons sur WhatsApp et répondons en quelques minutes.",
+  q4send:"Recevoir mes correspondances sur WhatsApp",
+  qBack:"← Retour"
+};
+var EN = {};
+function applyLang(lang){
+  LANG = (lang === 'fr') ? 'fr' : 'en';
+  document.querySelectorAll('[data-t]').forEach(function(el){
+    var id = el.getAttribute('data-t');
+    if(EN[id] === undefined) EN[id] = el.innerHTML;      // capture English once
+    var val = (LANG === 'fr' && FR[id] != null) ? FR[id] : EN[id];
+    if(el.innerHTML !== val) el.innerHTML = val;
+  });
+  // WhatsApp prefilled messages + hrefs follow the language
+  document.querySelectorAll('[data-msg]').forEach(function(el){
+    if(!el.getAttribute('data-msg-en')) el.setAttribute('data-msg-en', el.getAttribute('data-msg'));
+    var fr = el.getAttribute('data-msg-fr');
+    var m = (LANG === 'fr' && fr) ? fr : el.getAttribute('data-msg-en');
+    el.setAttribute('data-msg', m);
+    if(el.tagName === 'A'){ el.setAttribute('href', 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m)); }
+  });
+  // input placeholders
+  document.querySelectorAll('[data-ph-fr]').forEach(function(el){
+    if(!el.getAttribute('data-ph-en')) el.setAttribute('data-ph-en', el.getAttribute('placeholder') || '');
+    el.setAttribute('placeholder', (LANG === 'fr') ? el.getAttribute('data-ph-fr') : el.getAttribute('data-ph-en'));
+  });
+  // toggle UI + document language
+  document.querySelectorAll('#langtoggle button').forEach(function(b){
+    var on = b.getAttribute('data-lang') === LANG;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  document.documentElement.setAttribute('lang', LANG);
+  try{ localStorage.setItem('gaia_lang', LANG); }catch(e){}
+  if(typeof quiz !== 'undefined' && quiz.classList.contains('open')){ renderSummary(); }
+}
+document.querySelectorAll('#langtoggle button').forEach(function(b){
+  b.addEventListener('click', function(){
+    applyLang(b.getAttribute('data-lang'));
+    track('lang_switch', {lang:LANG});
+  });
+});
 
 /* ====== TRACKING (stubs, fire on every conversion intent) ====== */
 function track(event, params){
@@ -813,11 +968,11 @@ function openWA(message, source){
   window.open(url, '_blank');
 }
 document.querySelectorAll('[data-wa]').forEach(function(el){
-  var msg = el.getAttribute('data-msg') || 'Hi Gaia, I am interested in the residences.';
-  if(el.tagName==='A'){ el.setAttribute('href', 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg)); }
+  function curMsg(){ return el.getAttribute('data-msg') || 'Hi Gaia, I am interested in the residences.'; }
+  if(el.tagName==='A'){ el.setAttribute('href', 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(curMsg())); }
   el.addEventListener('click', function(e){
     e.preventDefault();
-    openWA(msg, el.getAttribute('data-wa'));
+    openWA(curMsg(), el.getAttribute('data-wa'));
   });
 });
 document.querySelectorAll('[data-google]').forEach(function(el){
@@ -850,10 +1005,13 @@ function goStep(n){
   if(n === 4){ renderSummary(); }
 }
 function renderSummary(){
+  var fr = (LANG === 'fr');
+  var lbl = fr ? {budget:'Budget', unit:'Type', goal:'Objectif'} : {budget:'Budget', unit:'Type', goal:'Goal'};
+  var sep = fr ? ' :</b> ' : ':</b> ';
   var parts = [];
-  if(answers.budget) parts.push('<b>Budget:</b> ' + answers.budget);
-  if(answers.unit)   parts.push('<b>Type:</b> ' + answers.unit);
-  if(answers.goal)   parts.push('<b>Goal:</b> ' + answers.goal);
+  if(answers.budget) parts.push('<b>' + lbl.budget + sep + answers.budget);
+  if(answers.unit)   parts.push('<b>' + lbl.unit + sep + answers.unit);
+  if(answers.goal)   parts.push('<b>' + lbl.goal + sep + answers.goal);
   document.getElementById('qsum').innerHTML = parts.join('<br>');
 }
 document.querySelectorAll('[data-quiz]').forEach(function(b){ b.addEventListener('click', function(){ goStep(1); openQuiz(); }); });
@@ -874,12 +1032,22 @@ document.querySelectorAll('.qopt').forEach(function(opt){
 document.getElementById('qsend').addEventListener('click', function(e){
   e.preventDefault();
   var name = (document.getElementById('qname').value || '').trim();
-  var msg = "Hi Gaia! I just used the residence finder:\n"
-    + (name ? "• Name: " + name + "\n" : "")
-    + (answers.budget ? "• Budget: " + answers.budget + "\n" : "")
-    + (answers.unit ? "• Type: " + answers.unit + "\n" : "")
-    + (answers.goal ? "• Goal: " + answers.goal + "\n" : "")
-    + "Please send me matched sea-view residences.";
+  var msg;
+  if(LANG === 'fr'){
+    msg = "Bonjour Gaia ! Je viens d'utiliser le sélecteur de résidence :\n"
+      + (name ? "• Prénom : " + name + "\n" : "")
+      + (answers.budget ? "• Budget : " + answers.budget + "\n" : "")
+      + (answers.unit ? "• Type : " + answers.unit + "\n" : "")
+      + (answers.goal ? "• Objectif : " + answers.goal + "\n" : "")
+      + "Merci de m'envoyer les résidences vue mer correspondantes.";
+  } else {
+    msg = "Hi Gaia! I just used the residence finder:\n"
+      + (name ? "• Name: " + name + "\n" : "")
+      + (answers.budget ? "• Budget: " + answers.budget + "\n" : "")
+      + (answers.unit ? "• Type: " + answers.unit + "\n" : "")
+      + (answers.goal ? "• Goal: " + answers.goal + "\n" : "")
+      + "Please send me matched sea-view residences.";
+  }
   track('quiz_complete', Object.assign({name_provided: !!name}, answers));
   closeQuiz();
   openWA(msg, 'quiz');
@@ -960,6 +1128,13 @@ document.querySelectorAll('[data-carousel]').forEach(function(car){
   document.querySelectorAll('.section .eyebrow,.section h2,.section .intro,.ocard,.unit,.quote,.stat,.tl,.media,.ggrid,.siteplan,.founders,.section .cta-row,.gcap,.compliance,.amen-card,.amen-extra,.vwrap').forEach(function(el){
     el.classList.add('reveal'); io.observe(el);
   });
+})();
+
+/* ====== APPLY SAVED LANGUAGE ON LOAD ====== */
+(function(){
+  var saved = 'en';
+  try{ saved = localStorage.getItem('gaia_lang') || 'en'; }catch(e){}
+  applyLang(saved);   // always run: captures English baseline into EN{} and syncs the toggle
 })();
 </script>
 
