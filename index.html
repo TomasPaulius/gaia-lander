@@ -82,6 +82,8 @@ header.scrolled .langtoggle button.on{color:var(--charcoal)}
 .hero .eyebrow{color:var(--gold-light);text-shadow:0 2px 16px rgba(0,0,0,.7),0 0 4px rgba(0,0,0,.55)}
 .hero h1{font-size:clamp(40px,7vw,76px);font-weight:600;margin:14px 0 16px;max-width:14ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
 .hero p.lead{font-size:clamp(17px,2.3vw,21px);max-width:46ch;font-weight:300;margin-bottom:26px;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.hero-sub{font-size:clamp(15px,1.9vw,17.5px);font-weight:300;letter-spacing:.6px;margin:2px 0 24px;opacity:.96;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero-sub b{font-weight:500}
 .hero .cta-row{margin-bottom:18px}
 .trust-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:13.5px;font-weight:300;opacity:.95}
 .trust-line span{display:inline-flex;align-items:center;gap:6px}
@@ -407,7 +409,8 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="hero-inner">
     <div class="eyebrow">Chaloklum Bay · Koh Phangan</div>
     <h1 data-t="heroH1">Nothing Can Be Built In Front Of You</h1>
-    <div class="cta-row" style="margin-top:26px">
+    <p class="hero-sub" data-t="heroSub">Sea-view residences from ฿6.9M</p>
+    <div class="cta-row">
       <a class="btn btn-wa" href="#" data-wa="hero" data-msg="Hi Gaia, I'm interested in the sea-view residences. Can you tell me more?" data-msg-fr="Bonjour Gaia, je suis intéressé(e) par les résidences vue mer. Pouvez-vous m'en dire plus ?">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
         <span data-t="waChat">Chat on WhatsApp</span>
@@ -809,6 +812,7 @@ var LANG = 'en';
 var FR = {
   waChat:"Discuter sur WhatsApp",
   heroH1:"Rien ne peut être construit devant vous",
+  heroSub:"Résidences vue mer à partir de 6,9M฿",
   svEye:"La Vue",
   svH2:"La baie de Chaloklum à 180°",
   svIntro:"La canopée en contrebas, les palmiers à hauteur des yeux. C'est le terrain sur lequel personne ne peut construire. Plus loin, la baie s'ouvre, et au-delà la montagne s'avance dans l'eau : c'est un parc national, vert jusqu'au bord de l'eau. Toute cette profondeur depuis une seule terrasse, à deux minutes au-dessus de la plage. C'est pourquoi cela semble plus grand qu'une vue, et pourquoi cela ne changera jamais.",
