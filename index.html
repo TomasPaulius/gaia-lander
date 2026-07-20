@@ -364,6 +364,17 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 .car-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
 .car-dots i.on{background:#fff;width:7px;height:7px}
 @media(hover:none){.car-arrow{display:none}}
+/* view pull-quote line */
+.viewline{font-family:var(--serif);font-size:clamp(21px,2.6vw,26px);font-weight:600;color:var(--forest);line-height:1.35;margin-top:22px;max-width:26ch}
+/* light-mode ownership cards */
+.own-light .ocard{background:#fff;border:1px solid #ece5d8;box-shadow:0 8px 24px rgba(20,25,18,.07)}
+.own-light .ocard:hover{border-color:var(--gold);background:#fff}
+.own-light .ocard svg{color:var(--gold)}
+.own-light .ocard h3{color:var(--forest)}
+.own-light .ocard p{color:var(--muted);opacity:1}
+/* dark amenities extras */
+.dark .amen-extra span{color:rgba(255,255,255,.9)}
+.dark .amen-extra svg{color:var(--gold-light)}
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.65,.25,1),transform .75s cubic-bezier(.2,.65,.25,1)}
 .reveal.in{opacity:1;transform:none}
@@ -395,20 +406,11 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <div class="eyebrow">Chaloklum Bay · Koh Phangan</div>
-    <h1 data-t="heroH1">The sea is the first thing you'll see.</h1>
-    <p class="lead" data-t="heroLead">Fully finished &amp; furnished sea-view residences from ฿6.9M, two minutes above Chaloklum Bay, Koh Phangan.</p>
-    <div class="cta-row">
+    <h1 data-t="heroH1">Nothing Can Be Built In Front Of You</h1>
+    <div class="cta-row" style="margin-top:26px">
       <a class="btn btn-wa" href="#" data-wa="hero" data-msg="Hi Gaia, I'm interested in the sea-view residences. Can you tell me more?" data-msg-fr="Bonjour Gaia, je suis intéressé(e) par les résidences vue mer. Pouvez-vous m'en dire plus ?">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.2Z"/></svg>
         <span data-t="waChat">Chat on WhatsApp</span>
-      </a>
-    </div>
-    <div style="margin-top:22px">
-      <a class="gbadge" href="#" data-google>
-        <span class="g"><svg viewBox="0 0 24 24" width="18" height="18" aria-label="Google reviews"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></span>
-        <span class="sep"></span>
-        <span class="stars">★★★★★</span>
-        <span class="score">5.0</span>
       </a>
     </div>
   </div>
@@ -420,57 +422,17 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
     <div class="split">
       <div>
         <div class="eyebrow" data-t="svEye">The View</div>
-        <h2 data-t="svH2">The kind of view you rearrange your day for.</h2>
-        <p class="intro" data-t="svIntro">Every Gaia residence opens onto a full 180° sweep of Chaloklum Bay. Open sea ahead, green mountains framing it, the beach two minutes down the hill. Wake up to it, work beside it, and never quite get used to it.</p>
-        <ul class="feat" style="font-size:16px;color:var(--ink)">
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> <span data-t="sv1">180° open sea and mountain views</span></li>
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> <span data-t="sv2">Two minutes' walk to the beach</span></li>
-          <li style="list-style:none;padding-left:24px;position:relative;margin-bottom:8px"><span style="position:absolute;left:0;color:var(--gold)">✓</span> <span data-t="sv3">Breathtaking from sunrise to sunset</span></li>
-        </ul>
+        <h2 data-t="svH2">180° sweep of Chaloklum Bay</h2>
+        <p class="intro" style="margin-bottom:0" data-t="svIntro">Canopy below you, palms at eye level. That's the land no one can build on. Past it the bay opens, and beyond it the mountain reaches into the water: that's national park, green all the way to the waterline. All that depth from one terrace, two minutes above the beach. That's why it feels bigger than a view, and why it stays that way.</p>
+        <p class="viewline" data-t="svLine">Not protected by a permit. Protected by the shape of the land.</p>
       </div>
       <div class="media"><img src="assets/hero-curtain.jpg" alt="A terrace chair looking over the sea view from a Gaia residence" loading="lazy"><span class="media-cap" data-t="svCap">A view from the project</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ IT'S REAL / CONSTRUCTION ============ -->
-<section class="section dark" data-ab="construction">
-  <div class="wrap">
-    <div class="split rev">
-      <div class="media"><img src="assets/finished-living.webp" alt="Living room of the finished, furnished Gaia residence with sea view" loading="lazy"></div>
-      <div>
-        <div class="eyebrow" data-t="coEye">Experience It Yourself</div>
-        <h2 data-t="coH2">One residence is already finished. Come walk it.</h2>
-        <p class="intro" data-t="coIntro"><strong>The show residence is standing right now, built, furnished and open for visits.</strong> This is exactly how yours arrives: fully finished and fully furnished, with nothing left for you to do. Walk the rooms, stand on the terrace, and feel the gentle breeze coming off the bay.</p>
-        <div class="timeline">
-          <div class="tl"><div class="stage" data-t="tlFoundations">Foundations</div><b data-t="tlComplete">Complete</b><div class="done" data-t="tlDone">✓ Done</div></div>
-          <div class="tl"><div class="stage" data-t="tlStructure">Structure</div><b data-t="tlProgress">In progress</b></div>
-          <div class="tl"><div class="stage" data-t="tlShow">Show Residence</div><b data-t="tlOpen">Open now</b><div class="done" data-t="tlVisit">✓ Visit it</div></div>
-          <div class="tl"><div class="stage" data-t="tlHand">First Handovers</div><b>Q4 2026</b></div>
-        </div>
-        <p class="intro" style="margin:22px 0 0" data-t="coBuild">And it's engineered to last: a 50-year CPAC tiled roof with thermal insulation, double-cavity walls sealed against heat, sound and moisture, reinforced concrete floors, and coastal-grade aluminium with tempered glass, all built for the tropical sun and sea air.</p>
-        <div class="cta-row" style="margin-top:22px">
-          <a class="btn btn-gold" href="#" data-wa="viewing" data-msg="Hi Gaia, I'd like to walk through the finished residence. When can I visit?" data-msg-fr="Bonjour Gaia, j'aimerais visiter la résidence terminée. Quand puis-je venir ?">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            <span data-t="coCta">Book a walkthrough of the finished residence</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="ggrid" style="margin-top:48px">
-      <button class="gthumb"><img src="assets/hero-living-seaview.webp" alt="Sea-view living room" loading="lazy"></button>
-      <button class="gthumb"><img src="assets/finished-wall.webp" alt="Finished living room" loading="lazy"></button>
-      <button class="gthumb"><img src="assets/finished-roomview.webp" alt="Sea view from the living room" loading="lazy"></button>
-      <button class="gthumb"><img src="assets/finished-bedroom.webp" alt="Master bedroom" loading="lazy"></button>
-      <button class="gthumb"><img src="assets/finished-bath1.jpg" alt="Bathroom" loading="lazy"></button>
-      <button class="gthumb"><img src="assets/finished-plants2.webp" alt="Terrace with lounge chair" loading="lazy"></button>
-    </div>
-    <p class="gcap" style="text-align:center" data-t="coGcap">Real photos of the finished, furnished residence. Tap any photo to explore the full set.</p>
-  </div>
-</section>
-
 <!-- ============ RESORT LIFE / AMENITIES ============ -->
-<section class="section amenities" style="background:var(--sand)" data-ab="amenities">
+<section class="section dark amenities" data-ab="amenities">
   <div class="wrap">
     <div class="eyebrow" data-t="amEye">Resort Life</div>
     <h2 data-t="amH2">A wellness resort you live inside.</h2>
@@ -491,7 +453,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ FOUNDERS / HUMAN TOUCH ============ -->
 <!-- TODO: when Tomas gets founder quotes/short videos (e.g. David on the rainy season,
      life on KPG), upgrade these bios with direct quotes or a video like the buyer one. -->
-<section class="section dark" data-ab="founders">
+<section class="section" style="background:var(--sand)" data-ab="founders">
   <div class="wrap">
     <div class="eyebrow" data-t="foEye">The People Behind Gaia</div>
     <h2 data-t="foH2">Built by two people who chose this island.</h2>
@@ -518,7 +480,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </section>
 
 <!-- ============ INVESTOR CASE ============ -->
-<section class="section invest-light" data-ab="investment">
+<section class="section dark" data-ab="investment">
   <div class="wrap">
     <div class="eyebrow" data-t="inEye">A Home That Pays For Itself</div>
     <h2 data-t="inH2">Sea-view lifestyle, hands-off income.</h2>
@@ -540,7 +502,7 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 </section>
 
 <!-- ============ SAFE OWNERSHIP ============ -->
-<section class="section dark" data-ab="ownership">
+<section class="section own-light" data-ab="ownership">
   <div class="wrap">
     <div class="eyebrow" data-t="owEye">Ownership You Can Trust</div>
     <h2 data-t="owH2">100% safe, and 100% yours.</h2>
@@ -568,6 +530,43 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <span data-t="owCta">Ask us anything on WhatsApp</span>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ============ IT'S REAL / CONSTRUCTION ============ -->
+<section class="section dark" data-ab="construction">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="media"><img src="assets/finished-living.webp" alt="Living room of the finished, furnished Gaia residence with sea view" loading="lazy"></div>
+      <div>
+        <div class="eyebrow" data-t="coEye">Experience It Yourself</div>
+        <h2 data-t="coH2">One residence is already finished. Come see what yours will be.</h2>
+        <p class="intro" data-t="coIntro"><strong>The show residence is standing right now, built, furnished and open for visits.</strong> Yours arrives the same way. Fully finished, fully furnished, ready to live in.</p>
+        <p class="intro" style="margin-bottom:0" data-t="coSense">The doors close with weight. The floor doesn't flex. You shut the windows and the outside goes completely quiet.</p>
+        <p class="intro" style="margin:16px 0 0" data-t="coBuild">It's engineered to last: a 50-year CPAC tiled roof with thermal insulation, double-cavity walls sealed against heat, sound and moisture, reinforced concrete floors, and coastal-grade aluminium with tempered glass, all built for the tropical sun and sea air.</p>
+        <div class="timeline">
+          <div class="tl"><div class="stage" data-t="tlFoundations">Foundations</div><b data-t="tlComplete">Complete</b><div class="done" data-t="tlDone">✓ Done</div></div>
+          <div class="tl"><div class="stage" data-t="tlStructure">Structure</div><b data-t="tlProgress">In progress</b></div>
+          <div class="tl"><div class="stage" data-t="tlShow">Show Residence</div><b data-t="tlOpen">Open now</b><div class="done" data-t="tlVisit">✓ Visit it</div></div>
+          <div class="tl"><div class="stage" data-t="tlHand">First Handovers</div><b>Q4 2026</b></div>
+        </div>
+        <div class="cta-row" style="margin-top:24px">
+          <a class="btn btn-gold" href="#" data-wa="viewing" data-msg="Hi Gaia, I'd like to walk through the finished residence. When can I visit?" data-msg-fr="Bonjour Gaia, j'aimerais visiter la résidence terminée. Quand puis-je venir ?">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-t="coCta">Book a walkthrough of the finished residence</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ggrid" style="margin-top:48px">
+      <button class="gthumb"><img src="assets/hero-living-seaview.webp" alt="Sea-view living room" loading="lazy"></button>
+      <button class="gthumb"><img src="assets/finished-wall.webp" alt="Finished living room" loading="lazy"></button>
+      <button class="gthumb"><img src="assets/finished-roomview.webp" alt="Sea view from the living room" loading="lazy"></button>
+      <button class="gthumb"><img src="assets/finished-bedroom.webp" alt="Master bedroom" loading="lazy"></button>
+      <button class="gthumb"><img src="assets/finished-bath1.jpg" alt="Bathroom" loading="lazy"></button>
+      <button class="gthumb"><img src="assets/finished-plants2.webp" alt="Terrace with lounge chair" loading="lazy"></button>
+    </div>
+    <p class="gcap" style="text-align:center" data-t="coGcap">Real photos of the finished, furnished residence. Tap any photo to explore the full set.</p>
   </div>
 </section>
 
@@ -809,23 +808,21 @@ var TESTIMONIAL_VIDEO_ID = 'u6Zi9MD7J7g';       // buyer testimonial (YouTube Sh
 var LANG = 'en';
 var FR = {
   waChat:"Discuter sur WhatsApp",
-  heroH1:"La mer, la première chose que vous verrez.",
-  heroLead:"Des résidences vue mer entièrement finies et meublées à partir de 6,9M฿, à deux minutes au-dessus de la baie de Chaloklum, Koh Phangan.",
+  heroH1:"Rien ne peut être construit devant vous",
   svEye:"La Vue",
-  svH2:"Le genre de vue pour laquelle on réorganise sa journée.",
-  svIntro:"Chaque résidence Gaia s'ouvre sur un panorama complet à 180° de la baie de Chaloklum. La mer en face, les montagnes verdoyantes qui l'encadrent, la plage à deux minutes en contrebas. On s'y réveille, on travaille à côté, et on ne s'y habitue jamais vraiment.",
-  sv1:"Vue mer et montagne dégagée à 180°",
-  sv2:"Deux minutes à pied de la plage",
-  sv3:"À couper le souffle, du lever au coucher du soleil",
+  svH2:"La baie de Chaloklum à 180°",
+  svIntro:"La canopée en contrebas, les palmiers à hauteur des yeux. C'est le terrain sur lequel personne ne peut construire. Plus loin, la baie s'ouvre, et au-delà la montagne s'avance dans l'eau : c'est un parc national, vert jusqu'au bord de l'eau. Toute cette profondeur depuis une seule terrasse, à deux minutes au-dessus de la plage. C'est pourquoi cela semble plus grand qu'une vue, et pourquoi cela ne changera jamais.",
+  svLine:"Pas protégée par un permis. Protégée par la forme du terrain.",
   svCap:"Une vue depuis le projet",
   coEye:"Vivez-le par vous-même",
-  coH2:"Une résidence est déjà terminée. Venez la visiter.",
-  coIntro:"<strong>La résidence témoin est déjà debout, construite, meublée et ouverte aux visites.</strong> C'est exactement ainsi que la vôtre sera livrée : entièrement finie et meublée, sans rien à faire de votre côté. Parcourez les pièces, tenez-vous sur la terrasse et sentez la douce brise qui monte de la baie.",
+  coH2:"Une résidence est déjà terminée. Venez voir ce que sera la vôtre.",
+  coIntro:"<strong>La résidence témoin est déjà debout, construite, meublée et ouverte aux visites.</strong> La vôtre sera livrée exactement ainsi. Entièrement finie, entièrement meublée, prête à vivre.",
+  coSense:"Les portes se ferment avec du poids. Le sol ne fléchit pas. Vous fermez les fenêtres et le monde extérieur devient totalement silencieux.",
   tlFoundations:"Fondations", tlComplete:"Terminées", tlDone:"✓ Fait",
   tlStructure:"Structure", tlProgress:"En cours",
   tlShow:"Résidence témoin", tlOpen:"Ouverte", tlVisit:"✓ À visiter",
   tlHand:"Premières livraisons",
-  coBuild:"Et c'est construit pour durer : une toiture en tuiles CPAC d'une durée de vie de 50 ans avec isolation thermique, des murs à double paroi étanches à la chaleur, au bruit et à l'humidité, des planchers en béton armé, et de l'aluminium qualité marine avec verre trempé, le tout conçu pour le soleil tropical et l'air marin.",
+  coBuild:"C'est construit pour durer : une toiture en tuiles CPAC d'une durée de vie de 50 ans avec isolation thermique, des murs à double paroi étanches à la chaleur, au bruit et à l'humidité, des planchers en béton armé, et de l'aluminium qualité marine avec verre trempé, le tout conçu pour le soleil tropical et l'air marin.",
   coCta:"Réservez une visite de la résidence terminée",
   coGcap:"Photos réelles de la résidence terminée et meublée. Touchez une photo pour voir toute la série.",
   amEye:"La vie en resort",
