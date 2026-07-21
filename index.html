@@ -8,10 +8,14 @@
 <meta name="robots" content="noindex">
 
 <!-- Open Graph (for FB/IG ad link previews) -->
-<meta property="og:title" content="Own a 180° Sea-View Residence on Koh Phangan, From ฿6.9M">
-<meta property="og:description" content="registered leasehold · Fully managed rental · Already building. Chat on WhatsApp or book a viewing of the finished residence.">
-<meta property="og:image" content="assets/hero-seaview.webp">
+<meta property="og:title" content="Nothing Can Be Built In Front Of You | Gaia Residence">
+<meta property="og:description" content="Sea-view residences overlooking Chaloklum Bay, Koh Phangan, from ฿6.9M. Fully finished and furnished. The show residence is open for visits.">
+<meta property="og:url" content="https://tomaspaulius.github.io/gaia-lander/">
+<meta property="og:image" content="https://tomaspaulius.github.io/gaia-lander/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +73,8 @@ header.scrolled .logo{color:var(--forest)}
 header.scrolled .langtoggle{border-color:rgba(44,59,45,.28);background:rgba(44,59,45,.05)}
 header.scrolled .langtoggle button{color:var(--forest)}
 header.scrolled .langtoggle button.on{color:var(--charcoal)}
-@media(max-width:760px){.langtoggle button{padding:6px 11px;font-size:12px}}
+@media(max-width:760px){.langtoggle button{padding:6px 9px;font-size:11.5px;gap:5px}.langtoggle .flag{width:16px;height:11px}
+  header{padding:12px 14px}.header-right{gap:8px}}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
@@ -137,13 +142,6 @@ header.scrolled .langtoggle button.on{color:var(--charcoal)}
 .ocard h3{font-size:23px;margin-bottom:8px}
 .ocard p{font-size:14.5px;opacity:.82;font-weight:300}
 
-/* timeline */
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 8px}
-@media(max-width:680px){.timeline{grid-template-columns:1fr 1fr}}
-.tl{background:var(--cream);border:1px solid #e7e0d3;border-radius:12px;padding:18px}
-.tl .stage{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600}
-.tl b{display:block;font-family:var(--serif);font-size:22px;margin-top:4px;color:var(--forest)}
-.tl .done{color:var(--wa-dark);font-weight:600;font-size:13px}
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
@@ -314,8 +312,6 @@ footer .disc{font-size:11.5px;opacity:.5;margin-top:18px;max-width:80ch}
 .tm:hover img{transform:scale(1.06);box-shadow:0 10px 24px rgba(0,0,0,.18)}
 .stat{transition:border-color .25s,background .25s}
 .stat:hover{border-color:rgba(212,184,130,.4);background:rgba(255,255,255,.09)}
-.tl{transition:transform .2s ease,box-shadow .2s ease}
-.tl:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,25,18,.08)}
 /* brand */
 .brand{display:flex;align-items:center;text-decoration:none}
 .wordmark{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#fff;white-space:nowrap;transition:color .3s;text-shadow:0 1px 14px rgba(0,0,0,.32)}
@@ -360,6 +356,12 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 .car-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
 .car-dots i.on{background:#fff;width:7px;height:7px}
 @media(hover:none){.car-arrow{display:none}}
+/* view section: head / media / body grid (image after H2 on mobile) */
+.view-split{grid-template-areas:"head media" "body media";row-gap:10px}
+.view-split .vhead{grid-area:head;align-self:end}
+.view-split .media{grid-area:media}
+.view-split .vbody{grid-area:body;align-self:start}
+@media(max-width:860px){.view-split{grid-template-areas:"head" "media" "body";row-gap:0}.view-split .vhead,.view-split .vbody{align-self:auto}.view-split .media{margin:20px 0 22px}}
 /* view pull-quote line */
 .viewline{font-family:var(--serif);font-size:clamp(21px,2.6vw,26px);font-weight:600;color:var(--forest);line-height:1.35;margin-top:22px;max-width:26ch}
 /* light-mode ownership cards */
@@ -416,14 +418,16 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
 <!-- ============ SEA VIEW HOOK ============ -->
 <section class="section" data-ab="seaview">
   <div class="wrap">
-    <div class="split">
-      <div>
+    <div class="split view-split">
+      <div class="vhead">
         <div class="eyebrow" data-t="svEye">The View</div>
         <h2 data-t="svH2">180° sweep of Chaloklum Bay</h2>
-        <p class="intro" style="margin-bottom:0" data-t="svIntro">Canopy below you, palms at eye level. That's the land no one can build on. Past it the bay opens, and beyond it the mountain reaches into the water: that's national park, green all the way to the waterline. All that depth from one terrace, two minutes above the beach. That's why it feels bigger than a view, and why it stays that way.</p>
-        <p class="viewline" data-t="svLine">Not protected by a permit. Protected by the shape of the land.</p>
       </div>
       <div class="media"><img src="assets/hero-curtain.jpg" alt="A terrace chair looking over the sea view from a Gaia residence" loading="lazy"><span class="media-cap" data-t="svCap">A view from the project</span></div>
+      <div class="vbody">
+        <p class="intro" style="margin-bottom:0" data-t="svIntro">Canopy below you, palms at eye level. <strong>That's the land no one can build on.</strong> Past it the bay opens, and beyond it the mountain reaches into the water: that's national park, green all the way to the waterline. All that depth from one terrace, two minutes above the beach. That's why it feels bigger than a view, and why it stays that way.</p>
+        <p class="viewline" data-t="svLine">Not protected by a permit. Protected by the shape of the land.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -541,12 +545,6 @@ header.scrolled .wordmark{color:var(--forest);text-shadow:none}
         <p class="intro" data-t="coIntro"><strong>The show residence is standing right now, built, furnished and open for visits.</strong> Yours arrives the same way. Fully finished, fully furnished, ready to live in.</p>
         <p class="intro" style="margin-bottom:0" data-t="coSense">The doors close with weight. The floor doesn't flex. You shut the windows and the outside goes completely quiet.</p>
         <p class="intro" style="margin:16px 0 0" data-t="coBuild">It's engineered to last: a 50-year CPAC tiled roof with thermal insulation, double-cavity walls sealed against heat, sound and moisture, reinforced concrete floors, and coastal-grade aluminium with tempered glass, all built for the tropical sun and sea air.</p>
-        <div class="timeline">
-          <div class="tl"><div class="stage" data-t="tlFoundations">Foundations</div><b data-t="tlComplete">Complete</b><div class="done" data-t="tlDone">✓ Done</div></div>
-          <div class="tl"><div class="stage" data-t="tlStructure">Structure</div><b data-t="tlProgress">In progress</b></div>
-          <div class="tl"><div class="stage" data-t="tlShow">Show Residence</div><b data-t="tlOpen">Open now</b><div class="done" data-t="tlVisit">✓ Visit it</div></div>
-          <div class="tl"><div class="stage" data-t="tlHand">First Handovers</div><b>Q4 2026</b></div>
-        </div>
         <div class="cta-row" style="margin-top:24px">
           <a class="btn btn-gold" href="#" data-wa="viewing" data-msg="Hi Gaia, I'd like to walk through the finished residence. When can I visit?" data-msg-fr="Bonjour Gaia, j'aimerais visiter la résidence terminée. Quand puis-je venir ?">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
@@ -800,17 +798,13 @@ var FR = {
   heroSub:"Résidences vue mer surplombant la baie de Chaloklum, <span style=\"white-space:nowrap\">à partir de <span class=\"amt\">6,9M฿</span></span>",
   svEye:"La Vue",
   svH2:"La baie de Chaloklum à 180°",
-  svIntro:"La canopée en contrebas, les palmiers à hauteur des yeux. C'est le terrain sur lequel personne ne peut construire. Plus loin, la baie s'ouvre, et au-delà la montagne s'avance dans l'eau : c'est un parc national, vert jusqu'au bord de l'eau. Toute cette profondeur depuis une seule terrasse, à deux minutes au-dessus de la plage. C'est pourquoi cela semble plus grand qu'une vue, et pourquoi cela ne changera jamais.",
+  svIntro:"La canopée en contrebas, les palmiers à hauteur des yeux. <strong>C'est le terrain sur lequel personne ne peut construire.</strong> Plus loin, la baie s'ouvre, et au-delà la montagne s'avance dans l'eau : c'est un parc national, vert jusqu'au bord de l'eau. Toute cette profondeur depuis une seule terrasse, à deux minutes au-dessus de la plage. C'est pourquoi cela semble plus grand qu'une vue, et pourquoi cela ne changera jamais.",
   svLine:"Pas protégée par un permis. Protégée par la forme du terrain.",
   svCap:"Une vue depuis le projet",
   coEye:"Vivez-le par vous-même",
   coH2:"Une résidence est déjà terminée. Venez voir ce que sera la vôtre.",
   coIntro:"<strong>La résidence témoin est déjà debout, construite, meublée et ouverte aux visites.</strong> La vôtre sera livrée exactement ainsi. Entièrement finie, entièrement meublée, prête à vivre.",
   coSense:"Les portes se ferment avec du poids. Le sol ne fléchit pas. Vous fermez les fenêtres et le monde extérieur devient totalement silencieux.",
-  tlFoundations:"Fondations", tlComplete:"Terminées", tlDone:"✓ Fait",
-  tlStructure:"Structure", tlProgress:"En cours",
-  tlShow:"Résidence témoin", tlOpen:"Ouverte", tlVisit:"✓ À visiter",
-  tlHand:"Premières livraisons",
   coBuild:"C'est construit pour durer : une toiture en tuiles CPAC d'une durée de vie de 50 ans avec isolation thermique, des murs à double paroi étanches à la chaleur, au bruit et à l'humidité, des planchers en béton armé, et de l'aluminium qualité marine avec verre trempé, le tout conçu pour le soleil tropical et l'air marin.",
   coCta:"Réservez une visite de la résidence terminée",
   coGcap:"Photos réelles de la résidence terminée et meublée. Touchez une photo pour voir toute la série.",
